@@ -57,6 +57,10 @@ const RegistrationPage = () => {
     setSendingMessage(true);
     axios
       .get("https://node-mailer-gq2x.onrender.com/register", {
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS",
+        },
         params: {
           fullName,
           email,

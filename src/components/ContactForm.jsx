@@ -16,6 +16,10 @@ const ContactForm = () => {
     console.log("Sending us a message");
     axios
       .get("https://node-mailer-gq2x.onrender.com/contact-us", {
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS",
+        },
         params: {
           name,
           email,
