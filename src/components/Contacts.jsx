@@ -4,7 +4,7 @@ import { MapPin, Phone, Mail } from "lucide-react";
 const Contacts = () => {
   return (
     <div>
-      <div className="flex flex-col gap-4  relative md:top-12 px-4">
+      <div className="flex flex-col gap-4 relative md:top-12 px-4">
         <div className="flex gap-3">
           <div className="w-6 h-6 flex justify-center items-center rounded-full bg-white relative top-1">
             <MapPin size={16} className="text-black" />

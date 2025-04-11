@@ -2,3 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+.contactbg {
+  background-image: url("https://res.cloudinary.com/druryt8ny/image/upload/v1744362809/mzmn9p0yqk8gs6q3l3bi.jpg");
+  background-size: cover;
+}

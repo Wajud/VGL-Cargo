@@ -56,16 +56,6 @@ const ContactForm = () => {
         className="border-b border-blue-600 outline-none bg-none"
         required
       />
-      {/* <input
-        type="text"
-        id="name"
-        name="user_name"
-        placeholder="Enter your name"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-        className=" p-3 h-[40px] w-full bg-[#FFFFFF] rounded-md border-2 border-green-600 focus:shadow-none focus:outline-none focus:border-2 focus:border-red-600 focus:bg-white "
-        required
-      /> */}
 
       <label className="font-semibold">Email</label>
 
@@ -79,16 +69,6 @@ const ContactForm = () => {
         className="border-b border-blue-600 outline-none bg-none"
         required
       />
-      {/* <input
-        type="email"
-        id="email"
-        name="user_email"
-        placeholder="Enter email address"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        className=" p-3 h-[40px] w-full bg-[#FFFFFF] rounded-md border-2 border-green-600 focus:shadow-none focus:outline-none focus:border-2 focus:border-red-600 focus:bg-white "
-        required
-      /> */}
 
       <label className="font-semibold">Phone Number</label>
 
@@ -101,15 +81,7 @@ const ContactForm = () => {
         className="border-b border-blue-600 outline-none bg-none"
         required
       />
-      {/* <input
-        type="tel"
-        id="email"
-        placeholder="Enter your phone number"
-        value={phoneNumber}
-        onChange={(e) => setPhoneNumber(e.target.value)}
-        className=" p-3 h-[40px] w-full bg-[#FFFFFF] rounded-md border-2 border-green-600 focus:shadow-none focus:outline-none focus:border-2 focus:border-red-600 focus:bg-white "
-        required
-      /> */}
+
       <label className="font-semibold">Message</label>
       <textarea
         id="message"
@@ -120,15 +92,6 @@ const ContactForm = () => {
         className=" w-full h-[100px] border-b border-blue-600 outline-none bg-none resize-none "
         required
       />
-      {/* <textarea
-        id="message"
-        name="message"
-        placeholder="write your message"
-        value={message}
-        onChange={(e) => setMessage(e.target.value)}
-        className=" w-full h-[140px] p-3 bg-[#FFFFFF] rounded-md border-2 border-green-600 focus:shadow-none focus:outline-none focus:border-2 focus:border-red-600 focus:bg-white "
-        required
-      /> */}
 
       <input
         type="submit"

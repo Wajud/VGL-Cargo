@@ -1,7 +1,8 @@
 import React from "react";
 import ceoImage from "../assets/ceo.jpg";
 import actionImage from "../assets/in-action.jpg";
-import aboutLanding from "../assets/about-landing.jpg";
+import aboutLanding from "../assets/another-about.jpg";
+
 import { motion } from "framer-motion";
 
 const About = () => {
@@ -50,7 +51,7 @@ const About = () => {
 
         <section className="bg-white text-gray-800 p-6 pt-2 md:p-12 md:pt-1">
           <h1 className="text-4xl font-bold text-blue-700 mb-12 md:hidden">
-            The SETS ANJI Standard
+            The SET ANJI Standard
           </h1>
 
           <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">

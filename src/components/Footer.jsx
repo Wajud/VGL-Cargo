@@ -4,7 +4,7 @@ function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="  py-4">
+    <footer className="bg-white py-2">
       <div className="container mx-auto text-center">
         <p className="text-sm md:text-base font-bold">
           © {currentYear} SET ANJI Engineering Limited. All rights reserved.
