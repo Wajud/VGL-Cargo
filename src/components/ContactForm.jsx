@@ -14,32 +14,33 @@ const ContactForm = () => {
 
     setSendingMessage(true);
     console.log("Sending us a message");
-    // axios
-    //   .get("https://node-mailer-gq2x.onrender.com/contact-us", {
-    //     headers: {
-    //       "Access-Control-Allow-Origin": "*",
-    //       "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS",
-    //     },
-    //     params: {
-    //       name,
-    //       email,
-    //       phoneNumber,
-    //       message,
-    //     },
-    //   })
-    //   .then(() => {
-    //     setSendingMessage(false);
-    //     setMessageSentStatus(true);
-    //     setName(" ");
-    //     setEmail(" ");
-    //     setPhoneNumber(" ");
-    //     setMessage(" ");
-    //     setTimeout(() => {
-    //       setMessageSentStatus(false);
-    //     }, 4000);
-    //     console.log("Message sent successfully");
-    //   })
-    //   .catch(() => console.log("Message not sent"));
+    axios
+      .get("http://localhost:5500/contact-us", {
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS",
+        },
+        params: {
+          name,
+          senderEmail: email,
+          phoneNumber,
+          message,
+          recipientEmail: "kareemwajud@yahoo.com",
+        },
+      })
+      .then(() => {
+        setSendingMessage(false);
+        setMessageSentStatus(true);
+        setName(" ");
+        setEmail(" ");
+        setPhoneNumber(" ");
+        setMessage(" ");
+        setTimeout(() => {
+          setMessageSentStatus(false);
+        }, 4000);
+        console.log("Message sent successfully");
+      })
+      .catch(() => console.log("Message not sent"));
   };
   return (
     <form className="flex flex-col mt-5 gap-4 min-w-fit w-[95%] mx-auto md:w-[35rem] px-8 py-2 md:mx-8 text-gray-700 bg-white rounded-md">

@@ -1,7 +1,7 @@
 import React from "react";
 import contactTwo from "../assets/contact-two.jpg";
 
-import contactBg from "../assets/contactbg.jpg";
+// import contactBg from "../assets/contactbg.jpg";
 import ContactForm from "../components/ContactForm";
 import Contacts from "../components/Contacts";
 
@@ -10,12 +10,12 @@ const ReContact = () => {
     <div className="pt-12">
       <div className="flex px-12">
         <div className="relative top-16 w-1/3">
-          <img
+          {/* <img
             src={contactBg}
             // src={contactTwo}
             alt="contact image"
             className="h-full max-h-screen object-cover"
-          />
+          /> */}
         </div>
         <div className="flex-1">
           {/* <h1>Contact us</h1> */}

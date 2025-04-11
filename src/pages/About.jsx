@@ -1,83 +1,193 @@
-import {motion} from "framer-motion"
-import CEO from "../assets/quality assurance.jpg"
+import React from "react";
+import ceoImage from "../assets/ceo.jpg";
+import actionImage from "../assets/in-action.jpg";
+import aboutLanding from "../assets/about-landing.jpg";
+import { motion } from "framer-motion";
 
 const About = () => {
-
-
   return (
-  <div className="py-20">
-   <div className="font-sans text-gray-800 bg-gray-50">
-      {/* Banner Section */}
-      <section className="relative w-full h-80 bg-gray-900 flex items-center justify-center shadow-lg">
-        <h1 className="text-white text-5xl font-extrabold tracking-wide">About Us</h1>
-      </section>
+    <div className="min-h-screen bg-white text-gray-800 p-6 pt-28 md:p-12 md:pt-28">
+      <div className="max-w-6xl mx-auto space-y-16">
+        <div className="relative">
+          <div
+            className="bg-gray-200"
+            style={{
+              clipPath: "polygon(100% 0, 100% 69%, 51% 100%, 0 70%, 0 0)",
+            }}
+          >
+            <img
+              src={aboutLanding}
+              alt="banner"
+              style={{
+                clipPath: "polygon(100% 0, 100% 69%, 51% 100%, 0 70%, 0 0)",
+              }}
+              className="w-full h-[50vh] object-cover"
+            />
+          </div>
 
-      {/* Mission & Vision */}
-      <motion.section 
-        className="py-16 px-6 text-center bg-white shadow-md rounded-lg mx-4 md:mx-auto max-w-4xl mt-10"
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-      >
-        <h2 className="text-4xl font-bold text-gray-800">Our Mission & Vision</h2>
-        <p className="text-lg text-gray-600 mt-4 leading-relaxed">
-          Our mission is to provide top-notch electrical installation and site management services with a commitment to safety, quality, and innovation. Our vision is to be a leader in the electrical industry, delivering sustainable and efficient solutions to our clients.
-        </p>
-      </motion.section>
+          <div className="bg-white shadow-md rounded-md min-h-[25vh] py-12 flex items-center w-[95%] md:w-[85%] mx-auto relative -top-40 z-10 px-4 md:px-12 -mb-12">
+            <section>
+              <div className="text-4xl font-bold text-blue-700 mb-6 flex flex-col gap-1">
+                <h1 className="text-5xl mb-2">Empowering Projects,</h1>
 
-      {/* What We Do */}
-      <motion.section 
-        className="py-16 px-6 text-center mx-4 md:mx-auto max-w-4xl mt-10"
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.2 }}
-      >
-        <h2 className="text-4xl font-bold text-gray-800">What We Do</h2>
-        <p className="text-lg text-gray-600 mt-4 leading-relaxed">
-          We specialize in <span className="font-semibold">electrical installation</span>, <span className="font-semibold">site management</span>, and <span className="font-semibold">procurement & sales</span> of electrical components. Our expert team ensures quality and efficiency in every project we handle.
-        </p>
-      </motion.section>
-
-      {/* Company History & Milestones */}
-      <motion.section 
-        className="py-16 px-6 bg-white text-center shadow-md rounded-lg mx-4 md:mx-auto max-w-4xl mt-10"
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.4 }}
-      >
-        <h2 className="text-4xl font-bold text-gray-800">Our Journey</h2>
-        <p className="text-lg text-gray-600 mt-4 leading-relaxed">
-          Since our founding, we have consistently delivered outstanding electrical solutions. Here are some key milestones in our journey:
-        </p>
-        <div className="mt-8 space-y-6 text-left border-l-4 border-gray-800 pl-6 max-w-3xl mx-auto">
-          <p className="text-lg font-medium">✅ 2015 - Company founded with a vision to innovate in the electrical industry.</p>
-          <p className="text-lg font-medium">✅ 2017 - Completed our first large-scale commercial installation project.</p>
-          <p className="text-lg font-medium">✅ 2020 - Expanded into site management and procurement services.</p>
-          <p className="text-lg font-medium">✅ 2023 - Recognized as a leading provider of electrical solutions nationwide.</p>
+                <h1>Energizing Possibilities</h1>
+              </div>
+              <p className="text-lg mb-4">
+                We are a trusted name in the electrical installations industry,
+                committed to delivering exceptional solutions in site
+                management, power management, and procurement and sales.
+              </p>
+              <p className="text-lg">
+                Backed by a team of professionals with a passion for precision
+                and quality, we ensure projects are executed safely,
+                efficiently, and within scope. From powering infrastructure to
+                managing complex operations, we provide solutions tailored to
+                each client's unique needs.
+              </p>
+            </section>
+          </div>
         </div>
-      </motion.section>
 
-      {/* Our CEO */}
-      <motion.section 
-        className="py-16 px-6 flex flex-col md:flex-row items-center gap-10 max-w-6xl mx-auto mt-10"
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.6 }}
-      >
-        <div className="flex-shrink-0">
-          <img src={CEO} alt="ceo image"
-            className="rounded-full shadow-xl border-4 border-gray-800 hover:scale-105 transition-transform"
+        <section className="bg-white text-gray-800 p-6 pt-2 md:p-12 md:pt-1">
+          <h1 className="text-4xl font-bold text-blue-700 mb-12 md:hidden">
+            The SETS ANJI Standard
+          </h1>
+
+          <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+            <motion.div
+              initial={{ x: -50, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="row-start-2 md:row-start-1"
+            >
+              <div className=" relative md:-top-12">
+                <h1 className="text-4xl font-bold text-blue-700 mb-6 hidden md:block">
+                  The SETS ANJI Standard
+                </h1>
+                <p className="text-lg mb-4">
+                  SETS ANJI Engineering Limited is a trusted provider of
+                  professional electrical installation and engineering services.
+                  We specialize in delivering efficient, reliable, and
+                  safety-focused solutions across residential, commercial, and
+                  industrial projects.
+                </p>
+                <p className="text-lg mb-4">
+                  With a team of skilled engineers and technicians, we handle
+                  every project with precision — from on-site management to
+                  power system design and procurement. Our approach is rooted in
+                  quality, attention to detail, and a strong commitment to
+                  exceeding client expectations.
+                </p>
+                <p className="text-lg">
+                  At SETS ANJI, we take pride in powering progress through
+                  smart, sustainable, and dependable engineering practices that
+                  stand the test of time.
+                </p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ x: 50, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <img
+                src={actionImage}
+                alt="SET ANJI team in action"
+                className="w-full  h-[25rem] object-top 3 md:h-[35rem]  object-cover rounded-xl shadow-md"
+              />
+            </motion.div>
+          </div>
+        </section>
+
+        <section className="flex flex-col md:flex-row items-center gap-8 bg-gray-100 p-6 pb-16 rounded-xl shadow-sm">
+          <img
+            src={ceoImage}
+            alt="CEO"
+            className="w-full h-[25rem] object-top md:w-1/3 md:h-full object-cover shadow-md"
           />
-        </div>
-        <div className="text-center md:text-left max-w-2xl">
-          <h2 className="text-4xl font-bold text-gray-800">Meet Our CEO</h2>
-          <p className="text-lg text-gray-600 mt-4 leading-relaxed">
-            Our CEO, <span className="font-semibold">[CEO Name]</span>, brings years of experience in electrical engineering and project management. Under his leadership, we have successfully executed numerous high-quality projects, setting new industry standards.
-          </p>
-        </div>
-      </motion.section>
+
+          <div className="relative top-10">
+            <h2 className="text-2xl font-semibold text-blue-600 mb-2">
+              CEO Spotlight
+            </h2>
+            <div className="text-lg flex flex-col gap-6">
+              <p>
+                Togbe Solomon is a seasoned businessman and the visionary CEO
+                and Director of Set Anji Engineer Ltd, a leading company
+                specializing in the maintenance, service, and repair of
+                industrial generators, as well as the installation of critical
+                power system components such as ATS rectifiers, backup
+                batteries, generators, and inverters.
+              </p>
+              <p>
+                A proud Nigerian national, Togbe Solomon has built a reputation
+                for excellence in the power and energy sector, providing
+                comprehensive solutions for managing and ensuring reliable power
+                for industrial operations. With years of experience in both
+                business management and technical expertise, Togbe Solomon has
+                successfully led Set Anji Engineer Ltd to become a trusted name
+                in the industry, known for its commitment to quality service,
+                customer satisfaction, and innovative power solutions. Under his
+                leadership, the company has grown significantly, serving clients
+                across various sectors, and continues to be a key player in
+                Nigeria's industrial power systems market.{" "}
+              </p>
+              <p>
+                His passion for technological advancements, combined with a deep
+                understanding of the challenges businesses face when it comes to
+                power reliability, drives his company’s mission to provide
+                top-tier services and products that enhance operational
+                efficiency and minimize downtime for clients. Through his
+                entrepreneurial spirit and dedication, Togbe Solomon continues
+                to shape the future of power management in Nigeria and beyond.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Services Summary */}
+        <section>
+          <h2 className="text-2xl font-semibold text-blue-600 mb-4">
+            What We Do
+          </h2>
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="p-4 border rounded-lg hover:shadow transition">
+              <h3 className="text-xl font-semibold mb-2 text-gray-900">
+                Site Management
+              </h3>
+              <p className="text-gray-700">
+                We oversee all electrical aspects of a site from planning to
+                execution, ensuring safety, compliance, and smooth operations
+                throughout.
+              </p>
+            </div>
+            <div className="p-4 border rounded-lg hover:shadow transition">
+              <h3 className="text-xl font-semibold mb-2 text-gray-900">
+                Power Management
+              </h3>
+              <p className="text-gray-700">
+                Our power management solutions ensure efficient energy
+                distribution and usage across systems, helping reduce downtime
+                and optimize performance.
+              </p>
+            </div>
+            <div className="p-4 border rounded-lg hover:shadow transition">
+              <h3 className="text-xl font-semibold mb-2 text-gray-900">
+                Procurement & Sales
+              </h3>
+              <p className="text-gray-700">
+                We source and supply quality electrical components and
+                systems—reliable tools for every scale of project, delivered on
+                time and within budget.
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
     </div>
-  </div>
   );
 };
 

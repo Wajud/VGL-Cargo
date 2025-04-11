@@ -14,8 +14,9 @@ const Contacts = () => {
               Address
             </h2>
             <div className="text-sm">
-              <p>3, Oredapo Street, off Capiol Road</p>
-              <p>Agege, Lagos, Nigeria</p>
+              <p>14, Raimi Ogundipe Street,</p>
+              <p>Ogba, Obawole, Lagos, </p>
+              <p>Nigeria</p>
             </div>
           </div>
         </div>
