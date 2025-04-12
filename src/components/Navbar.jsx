@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import logo from "../assets/logo.jpg";
+import logo from "../assets/logo-blue.jpg";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -37,7 +37,11 @@ const Navbar = () => {
       <div className="px-2 md:px-4 flex gap-x-8 justify-between items-center">
         {/* Logo */}
         <div className="flex items-center space-x-1">
-          <img src={logo} alt="logo" className="h-12 w-12 md:h-16 md:w-16" />
+          <img
+            src={logo}
+            alt="logo"
+            className="h-12 w-12 md:h-16 md:w-16 rounded-full"
+          />
           {/* <img
             src="https://res.cloudinary.com/dxswouxj5/image/upload/v1734967606/da15299b-594b-464e-8288-03f7e3e9d923_nt8gyc.jpg"
             alt="logo"

@@ -6,50 +6,14 @@ import Footer from "../components/Footer";
 
 const Contact = () => {
   return (
-    // <div>
-    //   <div className="pt-20 relative">
-    //     <div className="absolute top-8 left-0 w-full -z-10">
-    //       <img
-    //         src={bgAlt}
-    //         alt="contactbg image"
-    //         className="w-full max-h-contain object-cover"
-    //       />
-    //     </div>
-    //     <div className="absolute top-8 left-0 w-full bg-[rgba(0,0,0,0.8)] text-white pt-[4.5rem] md:pt-32 px-8 md:px-20">
-    //       <h1 className="text-4xl font-bold text-center pb-6">Get in Touch</h1>
-    //       <div className="flex flex-col gap-4 text-center">
-    //         <p>
-    //           We are here to power your projects with expert solutions and
-    //           relaible support. Whether you have a question, need a quote or
-    //           want to discuss your electrical installation needs, our team is
-    //           ready to assist you.{" "}
-    //         </p>
-    //         <p>Reach out today - let's bring your ideas to life!</p>
-    //       </div>
-
-    //       <div className="w-full flex flex-col md:flex-row justify-center gap-4 mt-16">
-    //         <div className="relative -top-8">
-    //           <ContactForm />
-    //         </div>
-    //         <div>
-    //           <Contacts />
-    //         </div>
-    //       </div>
-    //     </div>
-    //   </div>
-    //   <div className="">
-    //     <h1 className="text-4xl font-bold">THIS IS THE FOOTER</h1>
-    //   </div>
-    // </div>
-
     <div>
-      <div className="pt-20 contactbg">
-        <div className=" bg-[rgba(0,0,0,0.8)] text-white pt-[4.5rem] md:pt-32 px-8 md:px-20">
+      <div className="pt-10 contactbg">
+        <div className=" bg-[rgba(0,0,0,0.8)] text-white pt-[4.5rem] md:pt-32 px-8 md:px-20 pb-16">
           <h1 className="text-4xl font-bold text-center pb-6">Get in Touch</h1>
           <div className="flex flex-col gap-4 text-center">
             <p>
               We are here to power your projects with expert solutions and
-              relaible support. Whether you have a question, need a quote or
+              reliable support. Whether you have a question, need a quote or
               want to discuss your electrical installation needs, our team is
               ready to assist you.{" "}
             </p>

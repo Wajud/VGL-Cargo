@@ -60,7 +60,7 @@ const services = [
 
 const Services = () => {
   return (
-    <div className="">
+    <div className="pb-16">
       <div className="relative bg-blue-500">
         <img
           src={serviceBanner}

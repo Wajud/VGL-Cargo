@@ -37,14 +37,14 @@ const Contacts = () => {
           <div className="w-6 h-6 flex justify-center items-center rounded-full bg-white relative top-1">
             <Mail size={14} className="text-black" />
           </div>
-          <div>
+          <a href="mailto:setanjiengineering@gmail.com">
             <h2 className="text-blue-600 text-normal font-semibold mb-1">
               Email
             </h2>
             <div className="text-sm">
-              <p>kbwajud@gmail.com</p>
+              <p>setanjiengineering@gmail.com</p>
             </div>
-          </div>
+          </a>
         </div>
       </div>
     </div>
