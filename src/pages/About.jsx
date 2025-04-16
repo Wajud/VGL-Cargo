@@ -119,9 +119,9 @@ const About = () => {
             </h2>
             <div className="text-lg flex flex-col gap-6">
               <p>
-                Togbe Solomon is a seasoned businessman and the visionary CEO
-                and Director of Set Anji Engineer Ltd, a leading company
-                specializing in the maintenance, service, and repair of
+                SOLOMON OLUWASEUN TOGBE is a seasoned businessman and the
+                visionary CEO and Director of Set Anji Engineer Ltd, a leading
+                company specializing in the maintenance, service, and repair of
                 industrial generators, as well as the installation of critical
                 power system components such as ATS rectifiers, backup
                 batteries, generators, and inverters.

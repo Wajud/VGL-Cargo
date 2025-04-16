@@ -1,5 +1,4 @@
 import { Facebook, Instagram, Linkedin } from "lucide-react";
-
 import logo from "../assets/logo.jpg";
 
 export default function Footer() {
@@ -36,7 +35,7 @@ export default function Footer() {
         {/* Contact */}
         <div>
           <h4 className="text-lg font-semibold mb-2">Contact</h4>
-          <p className="text-sm text-gray-300">Phone: +234 801 234 5678</p>
+          <p className="text-sm text-gray-300">Phone: +234 913 304 4386</p>
           <a
             href="mailto:setanjiengineering@gmail.com"
             className="text-sm text-gray-300"

@@ -26,10 +26,10 @@ const Contacts = () => {
           </div>
           <div>
             <h2 className="text-blue-600 text-normal font-semibold mb-1">
-              Call/WhatsApp
+              Call
             </h2>
             <div className="text-sm">
-              <p>08143211592</p>
+              <p>09133044386</p>
             </div>
           </div>
         </div>

@@ -27,6 +27,10 @@ const Navbar = () => {
       path: "/services",
     },
     {
+      name: "Portfolio",
+      path: "/portfolio",
+    },
+    {
       name: "Contact",
       path: "/contact-us",
     },
@@ -40,16 +44,16 @@ const Navbar = () => {
           <img
             src={logo}
             alt="logo"
-            className="h-12 w-12 md:h-16 md:w-16 rounded-full"
+            className="h-[4.5rem] w-[4.5rem] md:h-16 md:w-16 rounded-full"
           />
           {/* <img
             src="https://res.cloudinary.com/dxswouxj5/image/upload/v1734967606/da15299b-594b-464e-8288-03f7e3e9d923_nt8gyc.jpg"
             alt="logo"
             className="h-12 w-12 md:h-16 md:w-16"
           /> */}
-          <h1 className="hidden md:block text-blue-800 text-4xl font-bold relative -top-1">
+          {/* <h1 className="hidden md:block text-blue-800 text-4xl font-bold relative -top-1">
             SET_ANJI
-          </h1>
+          </h1> */}
         </div>
 
         {/* Hamburger Menu for Mobile */}
@@ -98,8 +102,8 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* Links */}
-        <ul className="hidden md:flex space-x-6 font-bold text-gray-700">
+        {/*Desktop Links */}
+        <ul className="hidden flex-1 md:flex justify-center space-x-6 font-bold text-gray-700">
           {Links.map((link) => (
             <li>
               <Link
@@ -118,13 +122,9 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu */}
-      {/* {isMobileMenuOpen && (
-        <ul
-          id="mobile-menu"
-          className="absolute top-full left-0 w-full bg-gray-50 rounded-lg shadow-lg z-50 text-center"
-        > */}
+
       <ul
-        className={`absolute top-full left-0 w-full bg-gray-50 shadow-lg z-50 text-center transition-all duration-500 ${
+        className={`md:hidden absolute top-full left-0 w-full bg-gray-50 shadow-lg z-50 text-center transition-all duration-500 ${
           !isMobileMenuOpen ? "translate-x-[-100%]" : "translate-x-0"
         }`}
       >
