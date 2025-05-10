@@ -1,8 +1,6 @@
 import React from "react";
 import Contacts from "../components/Contacts";
-import bgAlt from "../assets/bg-alt.jpg";
 import ContactForm from "../components/ContactForm";
-import Footer from "../components/Footer";
 
 const Contact = () => {
   return (

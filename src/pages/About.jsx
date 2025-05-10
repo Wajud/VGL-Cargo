@@ -67,7 +67,7 @@ const About = () => {
                   The SET ANJI Standard
                 </h1>
                 <p className="text-lg mb-4">
-                  SETS ANJI Engineering Limited is a trusted provider of
+                  SET ANJI Engineering Limited is a trusted provider of
                   professional electrical installation and engineering services.
                   We specialize in delivering efficient, reliable, and
                   safety-focused solutions across residential, commercial, and
@@ -81,9 +81,9 @@ const About = () => {
                   exceeding client expectations.
                 </p>
                 <p className="text-lg">
-                  At SETS ANJI, we take pride in powering progress through
-                  smart, sustainable, and dependable engineering practices that
-                  stand the test of time.
+                  At SET ANJI, we take pride in powering progress through smart,
+                  sustainable, and dependable engineering practices that stand
+                  the test of time.
                 </p>
               </div>
             </motion.div>
@@ -120,10 +120,10 @@ const About = () => {
             <div className="text-lg flex flex-col gap-6">
               <p>
                 SOLOMON OLUWASEUN TOGBE is a seasoned businessman and the
-                visionary CEO and Director of Set Anji Engineer Ltd, a leading
-                company specializing in the maintenance, service, and repair of
-                industrial generators, as well as the installation of critical
-                power system components such as ATS rectifiers, backup
+                visionary CEO and Director of Set Anji Engineering Ltd, a
+                leading company specializing in the maintenance, service, and
+                repair of industrial generators, as well as the installation of
+                critical power system components such as ATS rectifiers, backup
                 batteries, generators, and inverters.
               </p>
               <p>

@@ -13,9 +13,9 @@ const ContactForm = () => {
     e.preventDefault();
 
     setSendingMessage(true);
-    console.log("Sending us a message");
+
     axios
-      .get("http://localhost:5500/contact-us", {
+      .get("https://main-node-mailer.onrender.com/contact-us", {
         headers: {
           "Access-Control-Allow-Origin": "*",
           "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS",
@@ -25,7 +25,8 @@ const ContactForm = () => {
           senderEmail: email,
           phoneNumber,
           message,
-          recipientEmail: "kareemwajud@yahoo.com",
+          recipientEmail: "setanjiengineering@gmail.com",
+          subject: "New Mail from Company Website",
         },
       })
       .then(() => {

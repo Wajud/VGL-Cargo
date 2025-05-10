@@ -11,7 +11,6 @@ const Navbar = () => {
 
   const location = useLocation();
   const pathName = location.pathname;
-  console.log(pathName);
 
   const Links = [
     {
@@ -26,10 +25,10 @@ const Navbar = () => {
       name: "Services",
       path: "/services",
     },
-    {
-      name: "Portfolio",
-      path: "/portfolio",
-    },
+    // {
+    //   name: "Portfolio",
+    //   path: "/portfolio",
+    // },
     {
       name: "Contact",
       path: "/contact-us",
@@ -46,11 +45,7 @@ const Navbar = () => {
             alt="logo"
             className="h-[4.5rem] w-[4.5rem] md:h-16 md:w-16 rounded-full"
           />
-          {/* <img
-            src="https://res.cloudinary.com/dxswouxj5/image/upload/v1734967606/da15299b-594b-464e-8288-03f7e3e9d923_nt8gyc.jpg"
-            alt="logo"
-            className="h-12 w-12 md:h-16 md:w-16"
-          /> */}
+
           {/* <h1 className="hidden md:block text-blue-800 text-4xl font-bold relative -top-1">
             SET_ANJI
           </h1> */}
