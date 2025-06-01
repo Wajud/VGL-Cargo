@@ -1,5 +1,6 @@
 import { Facebook, Instagram, Linkedin } from "lucide-react";
 import logo from "../assets/logo.jpg";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -36,12 +37,18 @@ export default function Footer() {
         <div>
           <h4 className="text-lg font-semibold mb-2">Contact</h4>
           <p className="text-sm text-gray-300">Phone: +234 913 304 4386</p>
-          <a
-            href="mailto:setanjiengineering@gmail.com"
+          <Link
+            to="mailto:setanjiengineering@gmail.com" target="_blank"
             className="text-sm text-gray-300"
           >
             Email: setanjiengineering@gmail.com
-          </a>
+          </Link><br/>
+          <Link
+            to="https://www.instagram.com/set_anji?igsh=emxvYmpnaTN1bjBx" target="_blank"
+            className="text-sm text-gray-300"
+          >
+            Instagram: SET ANJI ENGINEERING LTD
+          </Link>
         </div>
 
         {/* Quick Links */}
@@ -49,24 +56,24 @@ export default function Footer() {
           <h4 className="text-lg font-semibold mb-2">Quick Links</h4>
           <ul className="text-sm text-gray-300 space-y-1">
             <li>
-              <a href="/" className="hover:text-white">
+              <Link to="/" className="hover:text-white">
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/services" className="hover:text-white">
+              <Link to="/services" className="hover:text-white">
                 Services
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/about" className="hover:text-white">
+              <Link to="/about" className="hover:text-white">
                 About Us
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/contact" className="hover:text-white">
+              <Link to="/contact" className="hover:text-white">
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

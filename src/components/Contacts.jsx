@@ -1,5 +1,6 @@
 import React from "react";
-import { MapPin, Phone, Mail } from "lucide-react";
+import { MapPin, Phone, Mail, Instagram } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Contacts = () => {
   return (
@@ -37,14 +38,27 @@ const Contacts = () => {
           <div className="w-6 h-6 flex justify-center items-center rounded-full bg-white relative top-1">
             <Mail size={14} className="text-black" />
           </div>
-          <a href="mailto:setanjiengineering@gmail.com">
+          <Link to="mailto:setanjiengineering@gmail.com">
             <h2 className="text-blue-600 text-normal font-semibold mb-1">
               Email
             </h2>
             <div className="text-sm">
               <p>setanjiengineering@gmail.com</p>
             </div>
-          </a>
+          </Link>
+        </div>
+        <div className="flex gap-3">
+          <div className="w-6 h-6 flex justify-center items-center rounded-full bg-white relative top-1">
+          <Instagram size={14} className="text-black"/>
+          </div>
+          <Link to="https://www.instagram.com/set_anji?igsh=emxvYmpnaTN1bjBx" target="_blank">
+            <h2 className="text-blue-600 text-normal font-semibold mb-1">
+             Instagram
+            </h2>
+            <div className="text-sm">
+              <p>SET ANJI ENGINEERING LTD </p>
+            </div>
+          </Link>
         </div>
       </div>
     </div>
