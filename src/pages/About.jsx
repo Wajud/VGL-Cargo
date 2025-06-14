@@ -49,7 +49,7 @@ const About = () => {
           </div>
         </div>
 
-        <section className="bg-white text-gray-800 p-6 pt-2 md:p-12 md:pt-1">
+        <section className="bg-white text-gray-800 p-6 pt-2 md:p-12 md:pt-1 -mt-6">
           <h1 className="text-4xl font-bold text-blue-700 mb-12 md:hidden">
             The SET ANJI Standard
           </h1>
@@ -103,7 +103,10 @@ const About = () => {
           </div>
         </section>
 
-        <section className="flex flex-col md:flex-row items-center gap-8 bg-gray-100 p-6 pb-16 rounded-xl shadow-sm">
+
+        {/* CEO Spotlight */}
+
+        {/* <section className="flex flex-col md:flex-row items-center gap-8 bg-gray-100 p-6 pb-16 rounded-xl shadow-sm">
           <h2 className="text-4xl text-center font-semibold text-blue-600 md:hidden">
             CEO Spotlight
           </h2>
@@ -150,7 +153,9 @@ const About = () => {
               </p>
             </div>
           </div>
-        </section>
+        </section> */}
+
+        {/* End of CEO Spotlight */}
 
         {/* Services Summary */}
         <section>
