@@ -1,97 +1,291 @@
 import React from "react";
-import { Link } from "react-router-dom";
-
 import {
-  Wrench,
-  Cog,
-  BatteryCharging,
-  Plug,
-  Power,
-  ShoppingCart,
-  Zap,
+  Truck,
+  // Airplane,
+  Globe,
+  Archive,
+  MapPin,
+  Users,
+  ChevronRight,
+  Star,
+  FileCheck,
 } from "lucide-react";
-import serviceBanner from "../assets/services.jpg";
-
-const services = [
-  {
-    title: "Generator Maintenance & Repair",
-    icon: <Wrench className="h-8 w-8 text-blue-600" />,
-    description:
-      "Comprehensive maintenance and repair services for industrial generators to ensure reliability and minimize downtime.",
-  },
-  {
-    title: "Installation of ATS & Rectifiers",
-    icon: <Cog className="h-8 w-8 text-green-600" />,
-    description:
-      "Safe and precise installation of Automatic Transfer Switches and rectifiers for efficient power switching and conversion.",
-  },
-  {
-    title: "Backup Battery Solutions",
-    icon: <BatteryCharging className="h-8 w-8 text-yellow-500" />,
-    description:
-      "Supply and installation of durable backup batteries to maintain power continuity during outages.",
-  },
-  {
-    title: "Generator & Inverter Installation",
-    icon: <Zap className="h-8 w-8 text-indigo-600" />,
-    description:
-      "Expert installation of generators and inverter systems customized to your specific energy requirements.",
-  },
-  {
-    title: "Power Management Services",
-    icon: <Power className="h-8 w-8 text-red-600" />,
-    description:
-      "Comprehensive power system solutions, including monitoring, optimization, and ongoing maintenance and repair to ensure efficiency and minimize downtime.",
-  },
-  {
-    title: "ACDB Installation",
-    icon: <Plug className="h-8 w-8 text-teal-600" />,
-    description:
-      "Installation of AC Distribution Boards (ACDB) for structured and safe power distribution across your electrical systems.",
-  },
-  {
-    id: 2,
-    icon: <ShoppingCart size={40} className="text-blue-600" />,
-    title: "Sales and Procurement",
-    description:
-      "Sourcing and supplying quality electrical components and materials.",
-  },
-];
+import { Link } from "react-router-dom";
+import bannerImage from "../assets/carrying-modes.jpeg";
 
 const Services = () => {
+  const services = [
+    {
+      id: "door-to-door",
+      title: "Door to Door Cargo Service from Overseas to Nigeria",
+      desc: "Reliable pickup from your supplier abroad and direct delivery to your doorstep in Nigeria, providing convenience, security, and peace of mind.",
+      icon: <Globe className="h-6 w-6" />,
+    },
+    {
+      id: "customs",
+      title: "Customs Clearing and Forwarding",
+      desc: "Swift and efficient customs clearance to prevent delays, ensuring full compliance with Nigerian import regulations.",
+      icon: <Archive className="h-6 w-6" />,
+    },
+    {
+      id: "import-export",
+      title: "Import and Export Services",
+      desc: "End-to-end handling of inbound and outbound shipments, seamlessly connecting your business to global markets.",
+      icon: <Globe className="h-6 w-6" />,
+    },
+    {
+      id: "container",
+      title: "Container Shipment",
+      desc: "Secure and timely movement of goods via full or shared container loads, tailored to suit your cargo requirements.",
+      icon: <Truck className="h-6 w-6" />,
+    },
+    {
+      id: "haulage",
+      title: "Haulage and General Services",
+      desc: "Safe and dependable transportation of goods across Nigeria using our trusted haulage network, from ports to final destinations.",
+      icon: <MapPin className="h-6 w-6" />,
+    },
+    {
+      id: "supply-chain",
+      title: "Supply Chain Management Solutions",
+      desc: "Integrated logistics strategies to optimize your supply chain, improve efficiency, and reduce operational costs.",
+      icon: <Users className="h-6 w-6" />,
+    },
+    {
+      id: "documentation",
+      title: "Documentation Handling",
+      desc: "Accurate preparation and management of shipping documents, ensuring smooth cargo flow and regulatory compliance.",
+      icon: <FileCheck className="h-6 w-6" />,
+    },
+  ];
+
+  const processSteps = [
+    "Request a quote",
+    "Tailored planning",
+    "Pickup & documentation",
+    "Transport & tracking",
+    "Delivery & support",
+  ];
+
+  const industries = [
+    "Manufacturing",
+    "Retail & E-commerce",
+    "Oil & Gas",
+    "Agriculture",
+    "Pharmaceuticals",
+    "Individuals",
+  ];
+
+  const testimonials = [
+    {
+      quote:
+        "VGL Cargo handled our urgent shipment flawlessly — fast, transparent, and professional.",
+      name: "Aisha Bello",
+      company: "Kano Textiles",
+    },
+    {
+      quote:
+        "Great communication and on-time delivery. Their customs team made import simple.",
+      name: "Emeka Okoro",
+      company: "Delta Foods Ltd.",
+    },
+    {
+      quote:
+        "I import electronics regularly, and their handling is top-notch. My goods always arrive safely, well-packed, and right on schedule.",
+      name: "Tunde",
+      company: "TechWave Electronics, Lagos",
+    },
+  ];
+
   return (
-    <div className="pb-16">
-      <div className="relative bg-blue-500">
-        <img
-          src={serviceBanner}
-          alt="service page banner"
-          className="w-full h-[85vh] object-cover"
-        />
-        <h1 className="text-center font-bold text-5xl absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 text-gray-700">
-          SERVICES
-        </h1>
-      </div>
+    <div className="min-h-screen bg-white text-black">
+      {/* HERO */}
+      <header className="bg-white border-b pt-20 px-4 md:px-12">
+        <div className="max-w-7xl mx-auto px-6 py-12 lg:py-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <div>
+              <h1 className="text-3xl lg:text-4xl font-extrabold tracking-tight">
+                Comprehensive freight forwarding services
+              </h1>
+              <p className="mt-4 text-lg text-gray-700 max-w-xl">
+                From port-to-port to door-to-door, we design logistics solutions
+                that fit your business — reliable, transparent, and tailored to
+                your needs.
+              </p>
 
-      <div className="px-6 pt-24">
-        <p className="text-2xl text-gray-700  text-center mb-10 max-w-2xl mx-auto">
-          Discover our professional electrical services, from installation to
-          maintenance, tailored to meet your needs.
-        </p>
+              <div className="mt-6 flex flex-wrap gap-3">
+                <Link
+                  to="/contact-us"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-lg font-medium"
+                  style={{ backgroundColor: "#D33434", color: "#fff" }}
+                >
+                  Request a Quote
+                  <ChevronRight className="h-4 w-4" />
+                </Link>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((service, index) => (
-            <Link
-              to="/contact-us"
-              key={index}
-              className="block bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition duration-300"
-            >
-              <div className="flex items-center mb-4">{service.icon}</div>
-              <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
-              <p className="text-gray-600 text-sm">{service.description}</p>
-            </Link>
-          ))}
+                <Link
+                  to="#contact"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-lg font-medium border"
+                >
+                  Contact Us
+                </Link>
+              </div>
+            </div>
+
+            <div className="order-first lg:order-last">
+              <img src={bannerImage} className="w-full" />
+            </div>
+          </div>
         </div>
-      </div>
+      </header>
+
+      <main className="max-w-7xl mx-auto px-16 py-12">
+        <section id="services">
+          <h2 className="text-2xl font-bold">Our Services</h2>
+          <p className="mt-2 text-gray-600 max-w-2xl">
+            We offer end-to-end logistics services to move your goods safely and
+            efficiently.
+          </p>
+
+          <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {services.map((s) => (
+              <article
+                key={s.id}
+                className="group bg-white border rounded-2xl p-6 hover:shadow-lg transition-shadow"
+              >
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-4">
+                    <div
+                      className="rounded-full p-3"
+                      style={{ backgroundColor: "rgba(211,52,52,0.08)" }}
+                    >
+                      <div className="text-red-600">{s.icon}</div>
+                    </div>
+                    <h3 className="text-lg font-semibold">{s.title}</h3>
+                  </div>
+
+                  <ChevronRight className="h-5 w-5 text-gray-400 group-hover:text-red-600" />
+                </div>
+
+                <p className="mt-4 text-gray-600">{s.desc}</p>
+
+                <div className="mt-6 flex items-center justify-between text-sm">
+                  <Link
+                    to="#"
+                    className="inline-flex items-center gap-2 font-medium"
+                    style={{ color: "#D33434" }}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      // window.scrollTo({ top: 0, behavior: "smooth" });
+                      window.scrollTo({ top: 0 });
+                    }}
+                  >
+                    Learn more
+                    <ChevronRight className="h-4 w-4" />
+                  </Link>
+                  <span className="text-gray-400">Trusted</span>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        {/* PROCESS */}
+        <section className="mt-12 md:mt-20">
+          <h2 className="text-2xl font-bold">How we work</h2>
+          <p className="mt-2 mb-4 text-gray-600 max-w-2xl">
+            A simple, transparent process that keeps you informed every step of
+            the way.
+          </p>
+
+          <ol className="mt-8 grid grid-cols-1 sm:grid-cols-5 gap-4">
+            {processSteps.map((step, index) => (
+              <li
+                key={step}
+                className="flex flex-col items-start gap-3 bg-gray-50 border rounded-xl p-4"
+              >
+                <div
+                  className="rounded-full h-10 w-10 flex items-center justify-center font-semibold"
+                  style={{ backgroundColor: "#1A1A40", color: "#fff" }}
+                >
+                  {index + 1}
+                </div>
+                <div className="text-sm font-medium">{step}</div>
+              </li>
+            ))}
+          </ol>
+        </section>
+
+        {/* INDUSTRIES SERVED */}
+        <section className="mt-12 md:mt-20">
+          <h2 className="text-2xl font-bold">Industries we serve</h2>
+          <p className="mt-2 mb-4 text-gray-600 max-w-2xl">
+            We support a wide range of industries with tailored logistics
+            solutions.
+          </p>
+
+          <div className="mt-6 flex flex-wrap gap-3">
+            {industries.map((industry) => (
+              <span
+                key={industry}
+                className="inline-flex items-center gap-2 border rounded-full px-4 py-2 text-sm"
+              >
+                <Star className="h-4 w-4 text-yellow-500" />
+                {industry}
+              </span>
+            ))}
+          </div>
+        </section>
+
+        {/* TESTIMONIALS PREVIEW */}
+        <section className="mt-12">
+          <h2 className="text-2xl font-bold">What clients say</h2>
+          <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+            {testimonials.map((testimonial, index) => (
+              <blockquote
+                key={index}
+                className="border rounded-2xl p-6 bg-gray-50"
+              >
+                <p className="text-gray-800">“{testimonial.quote}”</p>
+                <footer className="mt-4 text-sm text-gray-600">
+                  — {testimonial.name},{" "}
+                  <span className="font-medium">{testimonial.company}</span>
+                </footer>
+              </blockquote>
+            ))}
+          </div>
+        </section>
+
+        {/* CTA */}
+        <section
+          id="contact"
+          className="mt-12 md:mt-20 rounded-2xl p-8"
+          style={{ backgroundColor: "#FDF2F2" }}
+        >
+          <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+            <div>
+              <h3 className="text-xl font-bold">Ready to move your cargo?</h3>
+              <p className="mt-2 mb-4 text-gray-700">
+                Get a tailored quote and timeline from our logistics experts.
+              </p>
+            </div>
+
+            <div className="flex items-center gap-4">
+              <Link
+                to="#"
+                className="px-5 py-3 rounded-lg font-medium"
+                style={{ backgroundColor: "#D33434", color: "#fff" }}
+              >
+                Request Quote
+              </Link>
+
+              <Link to="#" className="px-4 py-3 rounded-lg border">
+                Call Us
+              </Link>
+            </div>
+          </div>
+        </section>
+      </main>
     </div>
   );
 };

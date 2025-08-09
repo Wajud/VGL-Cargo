@@ -25,7 +25,7 @@ const ContactForm = () => {
           senderEmail: email,
           phoneNumber,
           message,
-          recipientEmail: "setanjiengineering@gmail.com",
+          recipientEmail: "kareemwajud@yahoo.com",
           subject: "New Mail from Company Website",
         },
       })
@@ -45,7 +45,9 @@ const ContactForm = () => {
   };
   return (
     <form className="flex flex-col mt-5 gap-4 min-w-fit w-[95%] mx-auto md:w-[35rem] px-8 py-2 md:mx-8 text-gray-700 bg-white rounded-md">
-      <h1 className="mt-6 mb-2 font-bold text-xl">Send Message </h1>
+      <h1 className="mt-6 mb-2 font-bold text-xl">
+        Ask Question/Request Quote{" "}
+      </h1>
       <label className="font-semibold">Name</label>
       <input
         type="text"
@@ -54,7 +56,7 @@ const ContactForm = () => {
         placeholder="Enter your name"
         value={name}
         onChange={(e) => setName(e.target.value)}
-        className="border-b border-blue-600 outline-none bg-none"
+        className="border-b border-red-600 outline-none bg-none"
         required
       />
 
@@ -67,7 +69,7 @@ const ContactForm = () => {
         placeholder="Enter email address"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
-        className="border-b border-blue-600 outline-none bg-none"
+        className="border-b border-red-600 outline-none bg-none"
         required
       />
 
@@ -79,7 +81,7 @@ const ContactForm = () => {
         placeholder="Enter your phone number"
         value={phoneNumber}
         onChange={(e) => setPhoneNumber(e.target.value)}
-        className="border-b border-blue-600 outline-none bg-none"
+        className="border-b border-red-600 outline-none bg-none"
         required
       />
 
@@ -90,7 +92,7 @@ const ContactForm = () => {
         placeholder="Write a message"
         value={message}
         onChange={(e) => setMessage(e.target.value)}
-        className=" w-full h-[100px] border-b border-blue-600 outline-none bg-none resize-none "
+        className=" w-full h-[100px] border-b border-red-600 outline-none bg-none resize-none "
         required
       />
 

@@ -1,10 +1,10 @@
 import { Facebook, Instagram, Linkedin } from "lucide-react";
-import logo from "../assets/logo.jpg";
+import logo from "../assets/logo.png";
 import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white py-10 px-6">
+    <footer className="bg-[#1A1A40] text-white py-10 px-6">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
         {/* Logo and Brief */}
         <div>
@@ -14,8 +14,8 @@ export default function Footer() {
             className="h-24 rounded-full mb-4"
           />
           <p className="text-sm text-gray-300">
-            Powering sites, managing energy, and delivering quality electrical
-            installations and services across Nigeria.
+            Simplifying logistics with reliable, affordable, and efficient
+            freight forwarding services tailored to meet your unique needs.
           </p>
         </div>
 
@@ -23,12 +23,9 @@ export default function Footer() {
         <div>
           <h4 className="text-lg font-semibold mb-2">Address</h4>
           <p className="text-sm text-gray-300">
-            {/* 12 Circuit Lane, Power City,
+            45, Osolo way, Isolo
             <br />
-            Lagos, Nigeria. */}
-            14, Raimi Ogundipe Street,
-            <br />
-            Ogba, Obawole, Lagos, <br />
+            Oshodi, Lagos, <br />
             Nigeria
           </p>
         </div>
@@ -36,18 +33,21 @@ export default function Footer() {
         {/* Contact */}
         <div>
           <h4 className="text-lg font-semibold mb-2">Contact</h4>
-          <p className="text-sm text-gray-300">Phone: +234 913 304 4386</p>
+          <div className="flex gap-2 text-sm text-gray-300 mb-1">
+            <p>Phone: </p>
+            <div>
+              <p>+234 817 507 3848,</p>
+              <p>+234 803 480 2444</p>
+            </div>
+          </div>
+
           <Link
-            to="mailto:setanjiengineering@gmail.com" target="_blank"
-            className="text-sm text-gray-300"
+            to="mailto:contact@vglcargo.com"
+            target="_blank"
+            className="text-sm text-gray-300 hover:text-white flex gap-4"
           >
-            Email: setanjiengineering@gmail.com
-          </Link><br/>
-          <Link
-            to="https://www.instagram.com/set_anji?igsh=emxvYmpnaTN1bjBx" target="_blank"
-            className="text-sm text-gray-300"
-          >
-            Instagram: SET ANJI ENGINEERING LTD
+            <p>Email: </p>
+            <p> contact@vglcargo.com</p>
           </Link>
         </div>
 
@@ -82,8 +82,8 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className="mt-10 border-t border-gray-700 pt-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
         <p>
-          &copy; {new Date().getFullYear()} SET Anji Engineering Ltd. All rights
-          reserved.
+          &copy; {new Date().getFullYear()} Valliant Global Logistics. All
+          rights reserved.
         </p>
       </div>
     </footer>

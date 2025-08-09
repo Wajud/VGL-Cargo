@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import logo from "../assets/logo-blue.jpg";
+import logo from "../assets/logo.png";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -25,10 +25,6 @@ const Navbar = () => {
       name: "Services",
       path: "/services",
     },
-    // {
-    //   name: "Portfolio",
-    //   path: "/portfolio",
-    // },
     {
       name: "Contact",
       path: "/contact-us",
@@ -46,9 +42,9 @@ const Navbar = () => {
             className="h-[4.5rem] w-[4.5rem] md:h-16 md:w-16 rounded-full"
           />
 
-          {/* <h1 className="hidden md:block text-blue-800 text-4xl font-bold relative -top-1">
-            SET_ANJI
-          </h1> */}
+          <h1 className="pl-2 text-red-500 font-bold text-2xl">VGL Cargo</h1>
+
+      
         </div>
 
         {/* Hamburger Menu for Mobile */}
@@ -98,15 +94,15 @@ const Navbar = () => {
         </div>
 
         {/*Desktop Links */}
-        <ul className="hidden flex-1 md:flex justify-center space-x-6 font-bold text-gray-700">
+        <ul className="hidden flex-1 md:flex justify-end space-x-6 font-bold text-gray-700">
           {Links.map((link) => (
             <li>
               <Link
                 to={link.path}
                 className={
                   pathName === link.path
-                    ? "hover:text-blue-500 cursor-pointer relative before:absolute before:-bottom-1 before:left-0 before:w-full before:h-[2px] before:bg-blue-500"
-                    : "hover:text-blue-500 cursor-pointer"
+                    ? "hover:text-red-500 cursor-pointer relative before:absolute before:-bottom-1 before:left-0 before:w-full before:h-[2px] before:bg-red-500"
+                    : "hover:text-red-500 cursor-pointer"
                 }
               >
                 {link.name}

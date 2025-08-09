@@ -10,12 +10,15 @@ const Contact = () => {
           <h1 className="text-4xl font-bold text-center pb-6">Get in Touch</h1>
           <div className="flex flex-col gap-4 text-center">
             <p>
-              We are here to power your projects with expert solutions and
-              reliable support. Whether you have a question, need a quote or
-              want to discuss your electrical installation needs, our team is
-              ready to assist you.{" "}
+              We are here to keep your cargo moving with expert logistics
+              solutions and reliable support. Whether you need a shipping quote,
+              have questions about customs, or want to discuss your freight
+              requirements, our team is ready to assist you.
             </p>
-            <p>Reach out today - let's bring your ideas to life!</p>
+            <p>
+              Reach out today – let’s get your goods delivered safely and on
+              time!
+            </p>
           </div>
 
           <div className="w-full flex flex-col md:flex-row justify-center gap-4 mt-16">
