@@ -11,7 +11,8 @@ import {
   FileCheck,
 } from "lucide-react";
 import { Link } from "react-router-dom";
-import bannerImage from "../assets/carrying-modes.jpeg";
+import bannerImage from "../assets/aeros.png";
+import { motion } from "framer-motion";
 
 const Services = () => {
   const services = [
@@ -73,7 +74,8 @@ const Services = () => {
     "Oil & Gas",
     "Agriculture",
     "Pharmaceuticals",
-    "Individuals",
+    "Importers & Exporters",
+    "Construction & Heavy Equipment",
   ];
 
   const testimonials = [
@@ -98,7 +100,7 @@ const Services = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white text-black">
+    <div className="min-h-screen bg-white text-black overflow-x-hidden">
       {/* HERO */}
       <header className="bg-white border-b pt-20 px-4 md:px-12">
         <div className="max-w-7xl mx-auto px-6 py-12 lg:py-20">
@@ -116,15 +118,14 @@ const Services = () => {
               <div className="mt-6 flex flex-wrap gap-3">
                 <Link
                   to="/contact-us"
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-lg font-medium"
-                  style={{ backgroundColor: "#D33434", color: "#fff" }}
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-lg font-medium text-white bg-[#D33434] hover:bg-red-700"
                 >
                   Request a Quote
                   <ChevronRight className="h-4 w-4" />
                 </Link>
 
                 <Link
-                  to="#contact"
+                  to="/contact-us"
                   className="inline-flex items-center gap-2 px-4 py-2 rounded-lg font-medium border"
                 >
                   Contact Us
@@ -132,159 +133,197 @@ const Services = () => {
               </div>
             </div>
 
-            <div className="order-first lg:order-last">
-              <img src={bannerImage} className="w-full" />
+            <div className="relative w-60 md:w-96 h-60 md:h-96">
+              {/* Blob Background */}
+              <svg
+                viewBox="0 0 200 200"
+                xmlns="http://www.w3.org/2000/svg"
+                className="absolute inset-0 w-full h-full text-red-300"
+              >
+                <path
+                  fill="currentColor"
+                  d="M42.1,-75.3C54.7,-68.7,66.2,-56.6,72.7,-42.4C79.3,-28.3,80.9,-12.1,79.5,3.7C78.1,19.4,73.6,34.7,64.5,47.7C55.4,60.8,41.8,71.6,26.1,75.4C10.3,79.1,-7.5,75.8,-23.6,69.4C-39.7,63,-54.1,53.5,-64.1,40.1C-74.2,26.7,-79.9,9.4,-79.6,-8.7C-79.2,-26.9,-72.8,-45.8,-60.7,-53.8C-48.6,-61.8,-30.8,-58.8,-15.3,-65.1C0.1,-71.3,14.6,-86.8,28.5,-88.7C42.4,-90.6,56,-79.8,68.6,-75.3Z"
+                  transform="translate(100 100)"
+                />
+              </svg>
+
+              {/* Foreground Image */}
+              <img
+                src={bannerImage}
+                alt="Foreground"
+                className="relative md:left-32 z-10 w-full mx-auto mt-8 md:scale-[150%] mx-6"
+              />
             </div>
           </div>
         </div>
       </header>
 
-      <main className="max-w-7xl mx-auto px-16 py-12">
-        <section id="services">
-          <h2 className="text-2xl font-bold">Our Services</h2>
-          <p className="mt-2 text-gray-600 max-w-2xl">
-            We offer end-to-end logistics services to move your goods safely and
-            efficiently.
-          </p>
+      <main className="max-w-7xl mx-auto pb-12 ">
+        <section id="services" className="bg-gray-50 px-16 py-12">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-2xl font-bold">Our Services</h2>
+            <p className="mt-2 text-gray-600 max-w-2xl">
+              We offer end-to-end logistics services to move your goods safely
+              and efficiently.
+            </p>
 
-          <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.map((s) => (
-              <article
-                key={s.id}
-                className="group bg-white border rounded-2xl p-6 hover:shadow-lg transition-shadow"
-              >
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-4">
-                    <div
-                      className="rounded-full p-3"
-                      style={{ backgroundColor: "rgba(211,52,52,0.08)" }}
-                    >
-                      <div className="text-red-600">{s.icon}</div>
+            <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {services.map((s) => (
+                <article
+                  key={s.id}
+                  className="group bg-white border rounded-2xl p-6 hover:shadow-lg transition-shadow"
+                >
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-4">
+                      <div
+                        className="rounded-full p-3"
+                        style={{ backgroundColor: "rgba(211,52,52,0.08)" }}
+                      >
+                        <div className="text-[#D33434]">{s.icon}</div>
+                      </div>
+                      <h3 className="text-lg font-semibold">{s.title}</h3>
                     </div>
-                    <h3 className="text-lg font-semibold">{s.title}</h3>
+
+                    <ChevronRight className="h-5 w-5 text-gray-400 group-hover:text-[#D33434]" />
                   </div>
 
-                  <ChevronRight className="h-5 w-5 text-gray-400 group-hover:text-red-600" />
-                </div>
+                  <p className="mt-4 text-gray-600">{s.desc}</p>
 
-                <p className="mt-4 text-gray-600">{s.desc}</p>
-
-                <div className="mt-6 flex items-center justify-between text-sm">
-                  <Link
-                    to="#"
-                    className="inline-flex items-center gap-2 font-medium"
-                    style={{ color: "#D33434" }}
-                    onClick={(e) => {
-                      e.preventDefault();
-                      // window.scrollTo({ top: 0, behavior: "smooth" });
-                      window.scrollTo({ top: 0 });
-                    }}
-                  >
-                    Learn more
-                    <ChevronRight className="h-4 w-4" />
-                  </Link>
-                  <span className="text-gray-400">Trusted</span>
-                </div>
-              </article>
-            ))}
-          </div>
+                  <div className="mt-6 flex items-center justify-between text-sm">
+                    <Link
+                      to="#"
+                      className="inline-flex items-center gap-2 font-medium"
+                      style={{ color: "#D33434" }}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        // window.scrollTo({ top: 0, behavior: "smooth" });
+                        window.scrollTo({ top: 0 });
+                      }}
+                    >
+                      Learn more
+                      <ChevronRight className="h-4 w-4" />
+                    </Link>
+                    <span className="text-gray-400">Trusted</span>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </motion.div>
         </section>
 
-        {/* PROCESS */}
-        <section className="mt-12 md:mt-20">
-          <h2 className="text-2xl font-bold">How we work</h2>
-          <p className="mt-2 mb-4 text-gray-600 max-w-2xl">
-            A simple, transparent process that keeps you informed every step of
-            the way.
-          </p>
-
-          <ol className="mt-8 grid grid-cols-1 sm:grid-cols-5 gap-4">
-            {processSteps.map((step, index) => (
-              <li
-                key={step}
-                className="flex flex-col items-start gap-3 bg-gray-50 border rounded-xl p-4"
-              >
-                <div
-                  className="rounded-full h-10 w-10 flex items-center justify-center font-semibold"
-                  style={{ backgroundColor: "#1A1A40", color: "#fff" }}
-                >
-                  {index + 1}
-                </div>
-                <div className="text-sm font-medium">{step}</div>
-              </li>
-            ))}
-          </ol>
-        </section>
-
-        {/* INDUSTRIES SERVED */}
-        <section className="mt-12 md:mt-20">
-          <h2 className="text-2xl font-bold">Industries we serve</h2>
-          <p className="mt-2 mb-4 text-gray-600 max-w-2xl">
-            We support a wide range of industries with tailored logistics
-            solutions.
-          </p>
-
-          <div className="mt-6 flex flex-wrap gap-3">
-            {industries.map((industry) => (
-              <span
-                key={industry}
-                className="inline-flex items-center gap-2 border rounded-full px-4 py-2 text-sm"
-              >
-                <Star className="h-4 w-4 text-yellow-500" />
-                {industry}
-              </span>
-            ))}
-          </div>
-        </section>
-
-        {/* TESTIMONIALS PREVIEW */}
-        <section className="mt-12">
-          <h2 className="text-2xl font-bold">What clients say</h2>
-          <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
-            {testimonials.map((testimonial, index) => (
-              <blockquote
-                key={index}
-                className="border rounded-2xl p-6 bg-gray-50"
-              >
-                <p className="text-gray-800">“{testimonial.quote}”</p>
-                <footer className="mt-4 text-sm text-gray-600">
-                  — {testimonial.name},{" "}
-                  <span className="font-medium">{testimonial.company}</span>
-                </footer>
-              </blockquote>
-            ))}
-          </div>
-        </section>
-
-        {/* CTA */}
-        <section
-          id="contact"
-          className="mt-12 md:mt-20 rounded-2xl p-8"
-          style={{ backgroundColor: "#FDF2F2" }}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
         >
-          <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-            <div>
-              <h3 className="text-xl font-bold">Ready to move your cargo?</h3>
-              <p className="mt-2 mb-4 text-gray-700">
-                Get a tailored quote and timeline from our logistics experts.
-              </p>
-            </div>
+          {/* PROCESS */}
+          <section className="mt-12 md:mt-20 px-16">
+            <h2 className="text-2xl font-bold">How we work</h2>
+            <p className="mt-2 mb-4 text-gray-600 max-w-2xl">
+              A simple, transparent process that keeps you informed every step
+              of the way.
+            </p>
 
-            <div className="flex items-center gap-4">
-              <Link
-                to="#"
-                className="px-5 py-3 rounded-lg font-medium"
-                style={{ backgroundColor: "#D33434", color: "#fff" }}
-              >
-                Request Quote
-              </Link>
+            <ol className="mt-8 grid grid-cols-1 sm:grid-cols-5 gap-4">
+              {processSteps.map((step, index) => (
+                <li
+                  key={step}
+                  className="flex flex-col items-start gap-3 bg-gray-50 border rounded-xl p-4"
+                >
+                  <div
+                    className="rounded-full h-10 w-10 flex items-center justify-center font-semibold"
+                    style={{ backgroundColor: "#1A1A40", color: "#fff" }}
+                  >
+                    {index + 1}
+                  </div>
+                  <div className="text-sm font-medium">{step}</div>
+                </li>
+              ))}
+            </ol>
+          </section>
 
-              <Link to="#" className="px-4 py-3 rounded-lg border">
-                Call Us
-              </Link>
+          {/* INDUSTRIES SERVED */}
+          <section className="mt-12 md:mt-20 px-16">
+            <h2 className="text-2xl font-bold">Industries we serve</h2>
+            <p className="mt-2 mb-4 text-gray-600 max-w-2xl">
+              We support a wide range of industries with tailored logistics
+              solutions.
+            </p>
+
+            <div className="mt-6 flex flex-wrap gap-3">
+              {industries.map((industry) => (
+                <span
+                  key={industry}
+                  className="inline-flex items-center gap-2 border rounded-full px-4 py-2 text-sm"
+                >
+                  <Star className="h-4 w-4 text-yellow-500" />
+                  {industry}
+                </span>
+              ))}
             </div>
-          </div>
-        </section>
+          </section>
+
+          {/* TESTIMONIALS PREVIEW */}
+          <section className="mt-12 px-16">
+            <h2 className="text-2xl font-bold">What clients say</h2>
+            <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+              {testimonials.map((testimonial, index) => (
+                <blockquote
+                  key={index}
+                  className="border rounded-2xl p-6 bg-gray-50"
+                >
+                  <p className="text-gray-800">“{testimonial.quote}”</p>
+                  <footer className="mt-4 text-sm text-gray-600">
+                    — {testimonial.name},{" "}
+                    <span className="font-medium">{testimonial.company}</span>
+                  </footer>
+                </blockquote>
+              ))}
+            </div>
+          </section>
+
+          {/* CTA */}
+          <section className="px-16">
+            <section
+              id="contact"
+              className="mt-12 md:mt-20 rounded-2xl p-8 bg-[#FDF2F2]"
+            >
+              <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+                <div>
+                  <h3 className="text-xl font-bold">
+                    Ready to move your cargo?
+                  </h3>
+                  <p className="mt-2 mb-4 text-gray-700">
+                    Get a tailored quote and timeline from our logistics
+                    experts.
+                  </p>
+                </div>
+
+                <div className="flex items-center gap-4">
+                  <Link
+                    to="/contact-us"
+                    className="px-5 py-3 rounded-lg font-medium text-white bg-[#D33434] hover:bg-red-700"
+                  >
+                    Request Quote
+                  </Link>
+
+                  <Link
+                    to="/contact-us"
+                    className="px-4 py-3 rounded-lg border"
+                  >
+                    Call Us
+                  </Link>
+                </div>
+              </div>
+            </section>
+          </section>
+        </motion.div>
       </main>
     </div>
   );

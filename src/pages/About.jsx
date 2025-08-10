@@ -1,203 +1,213 @@
-import React from "react";
-import ceoImage from "../assets/ceo.jpg";
-import actionImage from "../assets/in-action.jpg";
-import aboutLanding from "../assets/another-about.jpg";
-
 import { motion } from "framer-motion";
+import { Globe, Truck, Network, Handshake, Factory, Icon } from "lucide-react";
+import { targetArrow } from "@lucide/lab";
+import { Link } from "react-router-dom";
 
-const About = () => {
+export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-white text-gray-800 p-6 pb-16 pt-28 md:p-12 md:pb-24 md:pt-28">
-      <div className="max-w-6xl mx-auto space-y-16">
-        <div className="relative">
-          <div
-            className="bg-gray-200"
-            style={{
-              clipPath: "polygon(100% 0, 100% 69%, 51% 100%, 0 70%, 0 0)",
-            }}
-          >
-            <img
-              src={aboutLanding}
-              alt="banner"
-              style={{
-                clipPath: "polygon(100% 0, 100% 69%, 51% 100%, 0 70%, 0 0)",
-              }}
-              className="w-full h-[50vh] object-cover"
-            />
-          </div>
+    <div className="bg-white text-gray-900">
+      {/* Hero Section */}
+      <section className="relative pt-52 pb-32 flex items-center justify-center text-white">
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-[#D33434]/70"></div>
 
-          <div className="bg-white shadow-md rounded-md min-h-[25vh] py-12 flex items-center w-[95%] md:w-[85%] mx-auto relative -top-40 z-10 px-4 md:px-12 -mb-12">
-            <section>
-              <div className="text-4xl font-bold text-blue-700 mb-6 flex flex-col gap-1">
-                <h1 className="text-5xl mb-2">Empowering Projects,</h1>
-
-                <h1>Energizing Possibilities</h1>
-              </div>
-              <p className="text-lg mb-4">
-                We are a trusted name in the electrical installations industry,
-                committed to delivering exceptional solutions in site
-                management, power management, and procurement and sales.
-              </p>
-              <p className="text-lg">
-                Backed by a team of professionals with a passion for precision
-                and quality, we ensure projects are executed safely,
-                efficiently, and within scope. From powering infrastructure to
-                managing complex operations, we provide solutions tailored to
-                each client's unique needs.
-              </p>
-            </section>
-          </div>
-        </div>
-
-        <section className="bg-white text-gray-800 p-6 pt-2 md:p-12 md:pt-1 -mt-6">
-          <h1 className="text-4xl font-bold text-blue-700 mb-12 md:hidden">
-            The SET ANJI Standard
+        {/* Content */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="relative z-10 text-center px-6"
+        >
+          <h1 className="text-3xl md:text-5xl font-bold mb-4">
+            Delivering Your World, One Shipment at a Time
           </h1>
+          <div className="w-20 h-1 bg-white mx-auto mb-4"></div>
+          <p className="text-lg md:text-xl max-w-3xl mx-auto">
+            Freight made simple, fast, and reliable – moving your business
+            forward with precision, care, and global reach.
+          </p>
+        </motion.div>
+      </section>
 
-          <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
-            <motion.div
-              initial={{ x: -50, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="row-start-2 md:row-start-1"
-            >
-              <div className=" relative md:-top-12">
-                <h1 className="text-4xl font-bold text-blue-700 mb-6 hidden md:block">
-                  The SET ANJI Standard
-                </h1>
-                <p className="text-lg mb-4">
-                  SET ANJI Engineering Limited is a trusted provider of
-                  professional electrical installation and engineering services.
-                  We specialize in delivering efficient, reliable, and
-                  safety-focused solutions across residential, commercial, and
-                  industrial projects.
-                </p>
-                <p className="text-lg mb-4">
-                  With a team of skilled engineers and technicians, we handle
-                  every project with precision — from on-site management to
-                  power system design and procurement. Our approach is rooted in
-                  quality, attention to detail, and a strong commitment to
-                  exceeding client expectations.
-                </p>
-                <p className="text-lg">
-                  At SET ANJI, we take pride in powering progress through smart,
-                  sustainable, and dependable engineering practices that stand
-                  the test of time.
-                </p>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ x: 50, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <img
-                src={actionImage}
-                alt="SET ANJI team in action"
-                className="w-full  h-[25rem] object-top 3 md:h-[35rem]  object-cover rounded-xl shadow-md"
-              />
-            </motion.div>
-          </div>
-        </section>
-
-
-        {/* CEO Spotlight */}
-
-        {/* <section className="flex flex-col md:flex-row items-center gap-8 bg-gray-100 p-6 pb-16 rounded-xl shadow-sm">
-          <h2 className="text-4xl text-center font-semibold text-blue-600 md:hidden">
-            CEO Spotlight
+      {/* Who We Are */}
+      <section className="py-16 px-6 md:px-20 max-w-5xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          <h2 className="text-2xl md:text-3xl font-bold text-[#1A1A40] mb-6">
+            Who We Are
           </h2>
-          <img
-            src={ceoImage}
-            alt="CEO"
-            className="w-full h-[25rem] object-top md:w-1/3 md:h-full object-cover shadow-md"
-          />
+          <p className="text-gray-700 leading-relaxed mb-4">
+            At <strong>Valiant Global Logistics Limited</strong>, we specialize
+            in providing seamless, end-to-end logistics solutions that empower
+            businesses to thrive. From local deliveries to complex international
+            freight, our commitment is simple — deliver on time, every time,
+            with the utmost care and precision.
+          </p>
+          <p className="text-gray-700 leading-relaxed">
+            We understand that logistics is more than just moving goods; it’s
+            about enabling growth, building trust, and connecting businesses
+            with opportunities around the globe.
+          </p>
+        </motion.div>
+      </section>
 
-          <div className="relative top-10">
-            <h2 className="text-2xl font-semibold text-blue-600 mb-2">
-              CEO Spotlight
-            </h2>
-            <div className="text-lg flex flex-col gap-6">
-              <p>
-                SOLOMON OLUWASEUN TOGBE is a seasoned businessman and the
-                visionary CEO and Director of Set Anji Engineering Ltd, a
-                leading company specializing in the maintenance, service, and
-                repair of industrial generators, as well as the installation of
-                critical power system components such as ATS rectifiers, backup
-                batteries, generators, and inverters.
-              </p>
-              <p>
-                A proud Nigerian national, Togbe Solomon has built a reputation
-                for excellence in the power and energy sector, providing
-                comprehensive solutions for managing and ensuring reliable power
-                for industrial operations. With years of experience in both
-                business management and technical expertise, Togbe Solomon has
-                successfully led Set Anji Engineer Ltd to become a trusted name
-                in the industry, known for its commitment to quality service,
-                customer satisfaction, and innovative power solutions. Under his
-                leadership, the company has grown significantly, serving clients
-                across various sectors, and continues to be a key player in
-                Nigeria's industrial power systems market.{" "}
-              </p>
-              <p>
-                His passion for technological advancements, combined with a deep
-                understanding of the challenges businesses face when it comes to
-                power reliability, drives his company’s mission to provide
-                top-tier services and products that enhance operational
-                efficiency and minimize downtime for clients. Through his
-                entrepreneurial spirit and dedication, Togbe Solomon continues
-                to shape the future of power management in Nigeria and beyond.
-              </p>
-            </div>
-          </div>
-        </section> */}
+      {/* Mission, Vision, Values */}
+      <section className="bg-gray-50 py-16 px-6 md:px-20">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="p-6 bg-white shadow rounded-2xl"
+          >
+            {/* <Target className="w-10 h-10 text-[#D33434] mb-4" /> */}
+            <Icon
+              iconNode={targetArrow}
+              className="w-10 h-10 text-[#D33434] mb-4"
+            />
+            <h3 className="font-bold text-lg mb-2">Our Mission</h3>
+            <p className="text-gray-600">
+              To provide innovative, reliable, and cost-effective logistics
+              solutions that help our clients succeed in an ever-changing global
+              market.
+            </p>
+          </motion.div>
 
-        {/* End of CEO Spotlight */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            viewport={{ once: true }}
+            className="p-6 bg-white shadow rounded-2xl"
+          >
+            <Globe className="w-10 h-10 text-[#D33434] mb-4" />
+            <h3 className="font-bold text-lg mb-2">Our Vision</h3>
+            <p className="text-gray-600">
+              To be the logistics partner of choice for businesses worldwide,
+              recognized for our excellence, integrity, and customer-centric
+              approach.
+            </p>
+          </motion.div>
 
-        {/* Services Summary */}
-        <section>
-          <h2 className="text-2xl font-semibold text-blue-600 mb-4">
-            What We Do
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="p-6 bg-white shadow rounded-2xl"
+          >
+            <Handshake className="w-10 h-10 text-[#D33434] mb-4" />
+            <h3 className="font-bold text-lg mb-2">Our Values</h3>
+            <p className="text-gray-600">
+              Reliability, transparency, and partnership drive every decision we
+              make, ensuring our clients always receive world-class service.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Supply Chain Expertise */}
+      <section className="py-16 px-6 md:px-20 max-w-5xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          <h2 className="text-2xl md:text-3xl font-bold text-[#1A1A40] mb-6">
+            Supply Chain Optimization Expertise
           </h2>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            <div className="p-4 border rounded-lg hover:shadow transition">
-              <h3 className="text-xl font-semibold mb-2 text-gray-900">
-                Site Management
-              </h3>
-              <p className="text-gray-700">
-                We oversee all electrical aspects of a site from planning to
-                execution, ensuring safety, compliance, and smooth operations
-                throughout.
+          <p className="text-gray-700 mb-6">
+            In today's fast-paced business environment, a well-optimized supply
+            chain is essential. Our team of experts works closely with you to
+            streamline your processes, cut unnecessary costs, and boost overall
+            efficiency.
+          </p>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="p-6 bg-gray-50 rounded-2xl shadow">
+              <Network className="w-10 h-10 text-[#D33434] mb-4" />
+              <h3 className="font-bold mb-2">Analysis & Recommendations</h3>
+              <p className="text-gray-600">
+                Detailed assessment of your supply chain with tailored,
+                actionable improvement strategies.
               </p>
             </div>
-            <div className="p-4 border rounded-lg hover:shadow transition">
-              <h3 className="text-xl font-semibold mb-2 text-gray-900">
-                Power Management
-              </h3>
-              <p className="text-gray-700">
-                Our power management solutions ensure efficient energy
-                distribution and usage across systems, helping reduce downtime
-                and optimize performance.
+            <div className="p-6 bg-gray-50 rounded-2xl shadow">
+              <Truck className="w-10 h-10 text-[#D33434] mb-4" />
+              <h3 className="font-bold mb-2">Logistics Management</h3>
+              <p className="text-gray-600">
+                End-to-end management of transportation, warehousing, and
+                inventory to ensure smooth operations.
               </p>
             </div>
-            <div className="p-4 border rounded-lg hover:shadow transition">
-              <h3 className="text-xl font-semibold mb-2 text-gray-900">
-                Procurement & Sales
-              </h3>
-              <p className="text-gray-700">
-                We source and supply quality electrical components and
-                systems—reliable tools for every scale of project, delivered on
-                time and within budget.
+            <div className="p-6 bg-gray-50 rounded-2xl shadow">
+              <Factory className="w-10 h-10 text-[#D33434] mb-4" />
+              <h3 className="font-bold mb-2">Strategic Optimization</h3>
+              <p className="text-gray-600">
+                Implementation of advanced strategies like demand planning,
+                supply planning, and inventory optimization.
               </p>
             </div>
           </div>
-        </section>
-      </div>
+        </motion.div>
+      </section>
+
+      {/* Industries Served */}
+      <section className="bg-gray-50 py-16 px-6 md:px-20">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="max-w-5xl mx-auto"
+        >
+          <h2 className="text-2xl md:text-3xl font-bold text-[#1A1A40] mb-6">
+            Industries We Serve
+          </h2>
+          <p className="text-gray-700 mb-6">
+            Our logistics expertise spans multiple industries, allowing us to
+            tailor solutions to your specific needs.
+          </p>
+          <ul className="list-disc pl-5 text-gray-600 space-y-2">
+            <li>Importers & Exporters</li>
+            <li>Manufacturers</li>
+            <li>Retail & E-commerce</li>
+            <li>Construction & Heavy Equipment</li>
+            <li>Oil & Gas</li>
+            <li>Pharmaceuticals</li>
+            <li>Agriculture</li>
+          </ul>
+        </motion.div>
+      </section>
+
+      {/* Partnerships */}
+      <section className="py-16 px-6 md:px-20 max-w-5xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          <h2 className="text-2xl md:text-3xl font-bold text-[#1A1A40] mb-6">
+            Global Partnerships
+          </h2>
+          <p className="text-gray-700 leading-relaxed">
+            We are open to partnerships with shippers and freight companies
+            across the globe, creating mutually beneficial opportunities to
+            expand reach, improve efficiency, and deliver world-class service to
+            clients everywhere.
+          </p>
+          <button className="block w-fit mx-auto mt-6 px-6 py-3 bg-[#D33434] text-white font-semibold rounded-lg shadow-lg hover:bg-red-700 transition">
+            <Link to="/contact-us">Reach out to us</Link>
+          </button>
+        </motion.div>
+      </section>
     </div>
   );
-};
-
-export default About;
+}

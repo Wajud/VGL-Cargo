@@ -1,5 +1,12 @@
 import React from "react";
-import { MapPin, Phone, Mail, Instagram } from "lucide-react";
+import {
+  MapPin,
+  Phone,
+  Mail,
+  Instagram,
+  Facebook,
+  Linkedin,
+} from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Contacts = () => {
@@ -11,7 +18,7 @@ const Contacts = () => {
             <MapPin size={16} className="text-black" />
           </div>
           <div>
-            <h2 className="text-red-600 text-normal font-semibold mb-1">
+            <h2 className="text-[#D33434] text-normal font-semibold mb-1">
               Address
             </h2>
             <div className="text-sm">
@@ -26,7 +33,7 @@ const Contacts = () => {
             <Phone size={14} className="text-black" />
           </div>
           <div>
-            <h2 className="text-red-600 text-normal font-semibold mb-1">
+            <h2 className="text-[#D33434] text-normal font-semibold mb-1">
               Call
             </h2>
             <div className="text-sm">
@@ -34,35 +41,71 @@ const Contacts = () => {
             </div>
           </div>
         </div>
-        <div className="flex gap-3">
+        <Link to="mailto:contact@vglcargo.com" className="flex gap-3">
           <div className="w-6 h-6 flex justify-center items-center rounded-full bg-white relative top-1">
             <Mail size={14} className="text-black" />
           </div>
-          <Link to="mailto:setanjiengineering@gmail.com">
-            <h2 className="text-red-600 text-normal font-semibold mb-1">
+          <div>
+            <h2 className="text-[#D33434] text-normal font-semibold mb-1">
               Email
             </h2>
             <div className="text-sm">
               <p>contact@vglcargo.com</p>
             </div>
-          </Link>
-        </div>
-        {/* <div className="flex gap-3">
+          </div>
+        </Link>
+
+        <Link
+          to="https://www.linkedin.com/in/kunle-surakat-b07315160/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+          target="_blank"
+          className="flex gap-3"
+        >
+          <div className="w-6 h-6 flex justify-center items-center rounded-full bg-white relative top-1">
+            <Linkedin size={14} className="text-black" />
+          </div>
+          <div>
+            <h2 className="text-[#D33434] text-normal font-semibold mb-1">
+              Linkedin
+            </h2>
+            <div className="text-sm">
+              <p>Valiant Global Logistics Ltd. </p>
+            </div>
+          </div>
+        </Link>
+        <Link
+          to="https://www.instagram.com/vgl_cargo?igsh=MW42cTdxMTQ2dDNnMQ%3D%3D&utm_source=qr"
+          target="_blank"
+          className="flex gap-3"
+        >
           <div className="w-6 h-6 flex justify-center items-center rounded-full bg-white relative top-1">
             <Instagram size={14} className="text-black" />
           </div>
-          <Link
-            to="https://www.instagram.com/set_anji?igsh=emxvYmpnaTN1bjBx"
-            target="_blank"
-          >
-            <h2 className="text-blue-600 text-normal font-semibold mb-1">
+          <div>
+            <h2 className="text-[#D33434] text-normal font-semibold mb-1">
               Instagram
             </h2>
             <div className="text-sm">
-              <p>SET ANJI ENGINEERING LTD </p>
+              <p>Valiant Global Logistics Ltd. </p>
             </div>
-          </Link>
-        </div> */}
+          </div>
+        </Link>
+        <Link
+          to="https://www.facebook.com/share/19CMrXE4Wk/"
+          target="_blank"
+          className="flex gap-3"
+        >
+          <div className="w-6 h-6 flex justify-center items-center rounded-full bg-white relative top-1">
+            <Facebook size={14} className="text-black" />
+          </div>
+          <div>
+            <h2 className="text-[#D33434] text-normal font-semibold mb-1">
+              Facebook
+            </h2>
+            <div className="text-sm">
+              <p>Vgl Cargo </p>
+            </div>
+          </div>
+        </Link>
       </div>
     </div>
   );

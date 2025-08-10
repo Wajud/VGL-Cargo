@@ -17,17 +17,22 @@ const Navbar = () => {
       name: "Home",
       path: "/",
     },
-    {
-      name: "About",
-      path: "/about",
-    },
+
     {
       name: "Services",
       path: "/services",
     },
     {
+      name: "About",
+      path: "/about",
+    },
+    {
       name: "Contact",
       path: "/contact-us",
+    },
+    {
+      name: "FAQ",
+      path: "/faq",
     },
   ];
 
@@ -42,9 +47,7 @@ const Navbar = () => {
             className="h-[4.5rem] w-[4.5rem] md:h-16 md:w-16 rounded-full"
           />
 
-          <h1 className="pl-2 text-red-500 font-bold text-2xl">VGL Cargo</h1>
-
-      
+          <h1 className="pl-2 text-[#D33434] font-bold text-2xl">VGL Cargo</h1>
         </div>
 
         {/* Hamburger Menu for Mobile */}
@@ -54,14 +57,14 @@ const Navbar = () => {
             className="text-2xl focus:outline-none"
           >
             {isMobileMenuOpen ? (
-              <p className="text-red-500">
+              <p className="text-[#D33434]">
                 {" "}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
-                  stroke="currentColor"
+                  stroke="#D33434"
                   className="size-6"
                 >
                   <path
@@ -72,14 +75,14 @@ const Navbar = () => {
                 </svg>{" "}
               </p>
             ) : (
-              <p className="text-blue-500">
+              <p className="text-[#D33434]">
                 {" "}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
-                  stroke="currentColor"
+                  stroke="#D33434"
                   className="size-6"
                 >
                   <path
@@ -101,8 +104,8 @@ const Navbar = () => {
                 to={link.path}
                 className={
                   pathName === link.path
-                    ? "hover:text-red-500 cursor-pointer relative before:absolute before:-bottom-1 before:left-0 before:w-full before:h-[2px] before:bg-red-500"
-                    : "hover:text-red-500 cursor-pointer"
+                    ? "hover:text-[#D33434] cursor-pointer relative before:absolute before:-bottom-1 before:left-0 before:w-full before:h-[2px] before:bg-[#D33434]"
+                    : "hover:text-[#D33434] cursor-pointer"
                 }
               >
                 {link.name}
@@ -121,13 +124,13 @@ const Navbar = () => {
       >
         {Links.map((link) => (
           <li
-            className={` transition-all duration-500 py-2 border-b border-blue-200 last-of-type:border-b-0 hover:bg-gray-100 hover:text-blue-500 cursor-pointer `}
+            className={` transition-all duration-500 py-2 border-b border-[#D33434] last-of-type:border-b-0 hover:bg-gray-200 hover:text-[#D33434] cursor-pointer `}
           >
             <Link
               to={link.path}
               className={`block w-full relative ${
                 pathName === link.path
-                  ? "before:absolute before:-bottom-[2px] before:left-1/2 before:-translate-x-1/2 before:w-8 before:mx-auto before:h-[2px] before:bg-blue-500"
+                  ? "before:absolute before:-bottom-[2px] before:left-1/2 before:-translate-x-1/2 before:w-8 before:mx-auto before:h-[2px] before:bg-[#D33434]"
                   : ""
               }`}
             >

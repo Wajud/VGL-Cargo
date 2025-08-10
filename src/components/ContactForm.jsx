@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { use } from "react";
 
 const ContactForm = () => {
   const [name, setName] = useState("");
@@ -8,10 +9,17 @@ const ContactForm = () => {
   const [message, setMessage] = useState("");
   const [messageSentStatus, setMessageSentStatus] = useState(false);
   const [sendingMessage, setSendingMessage] = useState(false);
+  const [requiredFieldsError, setRequiredFieldsError] = useState(false);
 
   const sendMessage = (e) => {
     e.preventDefault();
 
+    if (!email || !message) {
+      console.log("Please enter email and message");
+      setRequiredFieldsError(true);
+      setTimeout(() => setRequiredFieldsError(false), 2000);
+      return;
+    }
     setSendingMessage(true);
 
     axios
@@ -56,7 +64,7 @@ const ContactForm = () => {
         placeholder="Enter your name"
         value={name}
         onChange={(e) => setName(e.target.value)}
-        className="border-b border-red-600 outline-none bg-none"
+        className="border-b border-[#D33434] outline-none bg-none"
         required
       />
 
@@ -69,7 +77,7 @@ const ContactForm = () => {
         placeholder="Enter email address"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
-        className="border-b border-red-600 outline-none bg-none"
+        className="border-b border-[#D33434] outline-none bg-none"
         required
       />
 
@@ -81,7 +89,7 @@ const ContactForm = () => {
         placeholder="Enter your phone number"
         value={phoneNumber}
         onChange={(e) => setPhoneNumber(e.target.value)}
-        className="border-b border-red-600 outline-none bg-none"
+        className="border-b border-[#D33434] outline-none bg-none"
         required
       />
 
@@ -92,16 +100,21 @@ const ContactForm = () => {
         placeholder="Write a message"
         value={message}
         onChange={(e) => setMessage(e.target.value)}
-        className=" w-full h-[100px] border-b border-red-600 outline-none bg-none resize-none "
+        className=" w-full h-[100px] border-b border-[#D33434] outline-none bg-none resize-none "
         required
       />
 
       <input
         type="submit"
         value="Send"
-        className=" text-white rounded-md bg-green-600  h-[40px] flex justify-center items-center gap-2 hover:bg-green-400 duration-500 mb-2 w-full"
+        className="cursor-pointer text-white font-semibold rounded-md bg-green-600  h-[40px] flex justify-center items-center gap-2 hover:bg-green-700 duration-500 mb-2 w-full"
         onClick={sendMessage}
       />
+      {requiredFieldsError && (
+        <p className="mt-1 mb-2 font-semibold text-[#D33434] uppercase text-center">
+          Email and Message are required.
+        </p>
+      )}
       {sendingMessage && (
         <div className="mt-2 flex gap-[2px] justify-center items-center">
           <div className="animate-spin rounded-full h-4 w-4 border-t-4 border-green-500 border-solid"></div>

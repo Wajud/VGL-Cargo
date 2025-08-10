@@ -5,8 +5,8 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Services from "./pages/Services";
+import Faq from "./pages/Faq";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import PortfolioPage from "./pages/Portfolio";
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact-us" element={<Contact />} />
           <Route path="/services" element={<Services />} />
-          {/* <Route path="/portfolio" element={<PortfolioPage />} /> */}
+          <Route path="/faq" element={<Faq />} />
         </Routes>
         <Footer />
       </div>
