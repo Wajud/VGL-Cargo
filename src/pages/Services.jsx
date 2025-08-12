@@ -76,6 +76,8 @@ const Services = () => {
     "Pharmaceuticals",
     "Importers & Exporters",
     "Construction & Heavy Equipment",
+    "IT & Tech Industry",
+    "China  Shipments",
   ];
 
   const testimonials = [
@@ -189,7 +191,7 @@ const Services = () => {
                       <h3 className="text-lg font-semibold">{s.title}</h3>
                     </div>
 
-                    <ChevronRight className="h-5 w-5 text-gray-400 group-hover:text-[#D33434]" />
+                    {/* <ChevronRight className="h-5 w-5 text-gray-400 group-hover:text-[#D33434]" /> */}
                   </div>
 
                   <p className="mt-4 text-gray-600">{s.desc}</p>

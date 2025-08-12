@@ -54,9 +54,9 @@ const features = [
 
 function Home() {
   return (
-    <section>
-      <div className="-pt-12 md:pt-20">
-        <section className="relative w-full h-screen flex items-center justify-center bg-gray-900 text-white overflow-hidden">
+    <section className="overflow-x-hidden">
+      <div className="-mt-8 md:pt-24">
+        <section className="relative w-full h-screen flex items-center justify-center bg-[rgba(0,0,0,0.95)] text-white overflow-hidden">
           <div className="absolute inset-0">
             <img
               src={homeBanner}
@@ -84,7 +84,7 @@ function Home() {
         {/* Services Overview Section */}
 
         <section
-          className="py-16 bg-white px-8 max-w-[90%] mx-auto"
+          className="py-16 bg-white px-8 max-w-[90%] mx-auto text-center md:text-left"
           id="services"
         >
           <motion.div
@@ -97,7 +97,7 @@ function Home() {
               <h2 className="text-3xl font-bold text-[#1A1A40] text-center mb-12">
                 Our Services
               </h2>
-              <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+              <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 text-center md:text-left">
                 {services.map((service, index) => (
                   <div
                     key={index}

@@ -33,7 +33,7 @@ const ContactForm = () => {
           senderEmail: email,
           phoneNumber,
           message,
-          recipientEmail: "kareemwajud@yahoo.com",
+          recipientEmail: "valiantgloballogistics@gmail.com",
           subject: "New Mail from Company Website",
         },
       })
@@ -107,7 +107,7 @@ const ContactForm = () => {
       <input
         type="submit"
         value="Send"
-        className="cursor-pointer text-white font-semibold rounded-md bg-green-600  h-[40px] flex justify-center items-center gap-2 hover:bg-green-700 duration-500 mb-2 w-full"
+        className="cursor-pointer text-white font-semibold rounded-md bg-[#1A1A40] hover:bg-[rgba(26,26,64,0.95)]  h-[40px] flex justify-center items-center gap-2 duration-500 mb-2 w-full"
         onClick={sendMessage}
       />
       {requiredFieldsError && (

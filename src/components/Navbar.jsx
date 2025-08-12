@@ -40,15 +40,8 @@ const Navbar = () => {
     <nav className="py-2 shadow-gray-700 shadow-sm md:px-8 bg-white fixed top-0 w-full z-50">
       <div className="px-2 md:px-4 flex gap-x-8 justify-between items-center">
         {/* Logo */}
-        <div className="flex items-center space-x-1">
-          <img
-            src={logo}
-            alt="logo"
-            className="h-[4.5rem] w-[4.5rem] md:h-16 md:w-16 rounded-full"
-          />
 
-          <h1 className="pl-2 text-[#D33434] font-bold text-2xl">VGL Cargo</h1>
-        </div>
+        <img src={logo} alt="logo" className="h-[3.5rem] object-cover" />
 
         {/* Hamburger Menu for Mobile */}
         <div className="md:hidden">

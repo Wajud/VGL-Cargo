@@ -11,7 +11,7 @@ export default function Footer() {
           <img
             src={logo}
             alt="Company Logo"
-            className="h-24 rounded-full mb-4"
+            className="h-[3.5rem] rounded-sm shadow-md mb-4"
           />
           <p className="text-sm text-gray-300">
             Simplifying logistics with reliable, affordable, and efficient
@@ -23,10 +23,10 @@ export default function Footer() {
         <div>
           <h4 className="text-lg font-semibold mb-2">Address</h4>
           <p className="text-sm text-gray-300">
-            45, Osolo way, Isolo
+            45, Osolo way,
             <br />
-            Oshodi, Lagos, <br />
-            Nigeria
+            off Muritala Muhammed Airport Road, <br />
+            Lagos, Nigeria.
           </p>
         </div>
 
@@ -41,14 +41,19 @@ export default function Footer() {
             </div>
           </div>
 
-          <Link
-            to="mailto:contact@vglcargo.com"
-            target="_blank"
-            className="text-sm text-gray-300 hover:text-white flex gap-4"
-          >
+          <div className="text-sm text-gray-300 hover:text-white flex gap-4">
             <p>Email: </p>
-            <p> contact@vglcargo.com</p>
-          </Link>
+            <div className="flex flex-col gap-[2px]">
+              <p>
+                <Link to="mailto:contact@vglcargo.com">
+                  contact@vglcargo.com
+                </Link>
+              </p>
+              <p>
+                <Link to="mailto:admin@vglcargo.com">admin@vglcargo.com</Link>
+              </p>
+            </div>
+          </div>
         </div>
 
         {/* Quick Links */}
@@ -73,6 +78,11 @@ export default function Footer() {
             <li>
               <Link to="/contact-us" className="hover:text-white">
                 Contact
+              </Link>
+            </li>
+            <li>
+              <Link to="/faq" className="hover:text-white">
+                FAQ
               </Link>
             </li>
           </ul>

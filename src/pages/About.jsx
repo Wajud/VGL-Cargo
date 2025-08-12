@@ -182,6 +182,8 @@ export default function AboutPage() {
             <li>Oil & Gas</li>
             <li>Pharmaceuticals</li>
             <li>Agriculture</li>
+            <li>IT & Tech Industry</li>
+            <li>China Shipments</li>
           </ul>
         </motion.div>
       </section>

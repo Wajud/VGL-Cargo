@@ -22,8 +22,8 @@ const Contacts = () => {
               Address
             </h2>
             <div className="text-sm">
-              <p>20, Osolo way,</p>
-              <p>Isolo, Oshodi, Lagos, </p>
+              <p>45, Osolo way,</p>
+              <p>off Muritala Muhammed Airport Road, Oshodi, Lagos, </p>
               <p>Nigeria</p>
             </div>
           </div>
@@ -41,7 +41,7 @@ const Contacts = () => {
             </div>
           </div>
         </div>
-        <Link to="mailto:contact@vglcargo.com" className="flex gap-3">
+        <div className="flex gap-3">
           <div className="w-6 h-6 flex justify-center items-center rounded-full bg-white relative top-1">
             <Mail size={14} className="text-black" />
           </div>
@@ -49,11 +49,18 @@ const Contacts = () => {
             <h2 className="text-[#D33434] text-normal font-semibold mb-1">
               Email
             </h2>
-            <div className="text-sm">
-              <p>contact@vglcargo.com</p>
+            <div className="text-sm flex flex-col gap-[2px]">
+              <p>
+                <Link to="mailto:contact@vglcargo.com">
+                  contact@vglcargo.com
+                </Link>
+              </p>
+              <p>
+                <Link to="mailto:admin@vglcargo.com">admin@vglcargo.com</Link>
+              </p>
             </div>
           </div>
-        </Link>
+        </div>
 
         <Link
           to="https://www.linkedin.com/in/kunle-surakat-b07315160/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
