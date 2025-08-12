@@ -5,8 +5,10 @@ import logo from "../assets/logo.png";
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen((prev) => !prev);
+  const openMobileMenu = () => setIsMobileMenuOpen(true);
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
   };
 
   const location = useLocation();
@@ -38,19 +40,16 @@ const Navbar = () => {
 
   return (
     <nav className="py-2 shadow-gray-700 shadow-sm md:px-8 bg-white fixed top-0 w-full z-50">
-      <div className="px-2 md:px-4 flex gap-x-8 justify-between items-center">
+      <div className="px-2 md:px-4 flex gap-x-2 justify-between items-center">
         {/* Logo */}
 
-        <img src={logo} alt="logo" className="h-[3.5rem] object-cover" />
+        <img src={logo} alt="logo" className="h-[3.5rem]  object-cover" />
 
         {/* Hamburger Menu for Mobile */}
         <div className="md:hidden">
-          <button
-            onClick={toggleMobileMenu}
-            className="text-2xl focus:outline-none"
-          >
+          <button className="text-2xl focus:outline-none">
             {isMobileMenuOpen ? (
-              <p className="text-[#D33434]">
+              <p className="text-[#D33434]" onClick={closeMobileMenu}>
                 {" "}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -68,7 +67,7 @@ const Navbar = () => {
                 </svg>{" "}
               </p>
             ) : (
-              <p className="text-[#D33434]">
+              <p className="text-[#D33434]" onClick={openMobileMenu}>
                 {" "}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -114,10 +113,11 @@ const Navbar = () => {
         className={`md:hidden absolute top-full left-0 w-full bg-gray-50 shadow-lg z-50 text-center transition-all duration-500 ${
           !isMobileMenuOpen ? "translate-x-[-100%]" : "translate-x-0"
         }`}
+        onClick={closeMobileMenu}
       >
         {Links.map((link) => (
           <li
-            className={` transition-all duration-500 py-2 border-b border-[#D33434] last-of-type:border-b-0 hover:bg-gray-200 hover:text-[#D33434] cursor-pointer `}
+            className={` transition-all duration-500 py-2 last-of-type:border-b-0 hover:bg-gray-200 hover:text-[#D33434] cursor-pointer `}
           >
             <Link
               to={link.path}

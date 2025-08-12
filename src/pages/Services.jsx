@@ -105,13 +105,13 @@ const Services = () => {
     <div className="min-h-screen bg-white text-black overflow-x-hidden">
       {/* HERO */}
       <header className="bg-white border-b pt-20 px-4 md:px-12">
-        <div className="max-w-7xl mx-auto px-6 py-12 lg:py-20">
+        <div className="max-w-[90%] mx-auto px-6 py-12 lg:py-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div>
               <h1 className="text-3xl lg:text-4xl font-extrabold tracking-tight">
                 Comprehensive freight forwarding services
               </h1>
-              <p className="mt-4 text-lg text-gray-700 max-w-xl">
+              <p className="mt-4 text-lg text-gray-700">
                 From port-to-port to door-to-door, we design logistics solutions
                 that fit your business — reliable, transparent, and tailored to
                 your needs.
@@ -135,9 +135,9 @@ const Services = () => {
               </div>
             </div>
 
-            <div className="relative w-60 md:w-96 h-60 md:h-96">
+            <div className="relative w-60 md:w-96 h-60 md:h-96 mx-auto md:mx-0 scale-[150%] md:scale-[100%] mt-16 md:mt-0 mb-12 md:mb-0">
               {/* Blob Background */}
-              <svg
+              {/* <svg
                 viewBox="0 0 200 200"
                 xmlns="http://www.w3.org/2000/svg"
                 className="absolute inset-0 w-full h-full text-red-300"
@@ -147,20 +147,32 @@ const Services = () => {
                   d="M42.1,-75.3C54.7,-68.7,66.2,-56.6,72.7,-42.4C79.3,-28.3,80.9,-12.1,79.5,3.7C78.1,19.4,73.6,34.7,64.5,47.7C55.4,60.8,41.8,71.6,26.1,75.4C10.3,79.1,-7.5,75.8,-23.6,69.4C-39.7,63,-54.1,53.5,-64.1,40.1C-74.2,26.7,-79.9,9.4,-79.6,-8.7C-79.2,-26.9,-72.8,-45.8,-60.7,-53.8C-48.6,-61.8,-30.8,-58.8,-15.3,-65.1C0.1,-71.3,14.6,-86.8,28.5,-88.7C42.4,-90.6,56,-79.8,68.6,-75.3Z"
                   transform="translate(100 100)"
                 />
+              </svg> */}
+
+              <svg
+                viewBox="-20 -20 240 240"
+                xmlns="http://www.w3.org/2000/svg"
+                className="absolute inset-0 w-full h-full text-red-300"
+              >
+                <path
+                  fill="currentColor"
+                  d="M39.8,-65.2C50.8,-55.1,60.6,-45.7,69.2,-34.4C77.8,-23.2,85.3,-11.1,86.5,1.5C87.8,14,82.9,28,74.2,39.9C65.5,51.8,53,61.6,39,68.5C25,75.4,9.5,79.4,-4.9,82.3C-19.4,85.2,-38.7,87,-53.7,78.6C-68.6,70.2,-79.3,51.6,-83.6,32C-87.8,12.4,-85.6,-8.2,-78.6,-26.8C-71.6,-45.4,-59.8,-62,-44.2,-70.6C-28.6,-79.3,-9.3,-80.1,5.8,-77.1C20.9,-74.1,41.8,-67.3,39.8,-65.2Z"
+                  transform="translate(100 100) scale(1.2)"
+                />
               </svg>
 
               {/* Foreground Image */}
               <img
                 src={bannerImage}
                 alt="Foreground"
-                className="relative md:left-32 z-10 w-full mx-auto mt-8 md:scale-[150%] mx-6"
+                className="relative md:left-32 z-10 w-full mx-auto mt-8 scale-[120%] md:scale-[150%] mx-6"
               />
             </div>
           </div>
         </div>
       </header>
 
-      <main className="max-w-7xl mx-auto pb-12 ">
+      <main className="mx-auto pt-20 md:pt-0 pb-12">
         <section id="services" className="bg-gray-50 px-16 py-12">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -169,7 +181,7 @@ const Services = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-2xl font-bold">Our Services</h2>
-            <p className="mt-2 text-gray-600 max-w-2xl">
+            <p className="mt-2 text-gray-600">
               We offer end-to-end logistics services to move your goods safely
               and efficiently.
             </p>
@@ -190,8 +202,6 @@ const Services = () => {
                       </div>
                       <h3 className="text-lg font-semibold">{s.title}</h3>
                     </div>
-
-                    {/* <ChevronRight className="h-5 w-5 text-gray-400 group-hover:text-[#D33434]" /> */}
                   </div>
 
                   <p className="mt-4 text-gray-600">{s.desc}</p>
@@ -203,7 +213,7 @@ const Services = () => {
                       style={{ color: "#D33434" }}
                       onClick={(e) => {
                         e.preventDefault();
-                        // window.scrollTo({ top: 0, behavior: "smooth" });
+
                         window.scrollTo({ top: 0 });
                       }}
                     >

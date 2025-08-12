@@ -54,7 +54,7 @@ const features = [
 
 function Home() {
   return (
-    <section className="overflow-x-hidden">
+    <section className="">
       <div className="-mt-8 md:pt-24">
         <section className="relative w-full h-screen flex items-center justify-center bg-[rgba(0,0,0,0.95)] text-white overflow-hidden">
           <div className="absolute inset-0">
@@ -93,7 +93,7 @@ function Home() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <div className="max-w-7xl mx-auto px-4">
+            <div className="max-w-[90%] mx-auto px-4">
               <h2 className="text-3xl font-bold text-[#1A1A40] text-center mb-12">
                 Our Services
               </h2>
@@ -150,7 +150,7 @@ function Home() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <div className="max-w-6xl mx-auto text-center">
+            <div className="max-w-[90%] mx-auto text-center">
               <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-[#1A1A40]">
                 Why Choose VGL Cargo?
               </h2>
