@@ -23,8 +23,8 @@ const Contacts = () => {
             </h2>
             <div className="text-sm">
               <p>45, Osolo way,</p>
-              <p>off Muritala Muhammed Airport Road, Oshodi, Lagos, </p>
-              <p>Nigeria</p>
+              <p>off Muritala Muhammed Airport Road, </p>
+              <p>Lagos, Nigeria.</p>
             </div>
           </div>
         </div>
