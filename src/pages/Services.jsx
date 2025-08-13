@@ -172,8 +172,11 @@ const Services = () => {
         </div>
       </header>
 
-      <main className="mx-auto pt-20 md:pt-0 pb-12">
-        <section id="services" className="bg-gray-50 px-16 py-12">
+      <main className="mx-auto  pb-12">
+        <section
+          id="services"
+          className="bg-gray-50 px-16 pt-20 md:pt-12 pb-12"
+        >
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
